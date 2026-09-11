@@ -103,7 +103,7 @@ const includedBenefits = [
 function Cta({ label = "QUERO GARANTIR MINHA VAGA", compactMobile = false }: { label?: string; compactMobile?: boolean }) {
   return (
     <Button asChild size="lg" className={`${compactMobile ? "h-12 text-xs sm:h-14 sm:text-sm" : "h-14 text-sm"} w-full rounded-full px-6 font-semibold sm:w-auto`}>
-      <a href="#investimento">
+      <a href="#inscricao">
         {label}
         <ArrowRight aria-hidden="true" />
       </a>
@@ -120,7 +120,7 @@ function Index() {
         <div className="mx-auto grid max-w-7xl grid-cols-[minmax(0,1fr)_auto] items-center gap-2 px-5 py-2 min-[641px]:gap-4 min-[641px]:py-3 lg:px-10">
           <a href="#inicio" className="min-w-0 whitespace-nowrap font-display text-[13px] font-semibold leading-none text-foreground min-[641px]:text-xl"><span className="min-[641px]:hidden">IA para Empresários</span><span className="hidden min-[641px]:inline">Inteligência Artificial para Empresários</span></a>
           <Button asChild size="sm" className="h-8 shrink-0 rounded-full px-3 text-xs min-[641px]:h-9 min-[641px]:px-4 min-[641px]:text-sm">
-            <a href="#investimento">Inscrever-me</a>
+            <a href="#inscricao">Inscrever-me</a>
           </Button>
         </div>
       </nav>
@@ -327,20 +327,50 @@ function Index() {
         </div>
       </section>
 
-      <section id="investimento" className="section-space bg-offer text-offer-foreground">
-        <div className="section-shell grid gap-12 lg:grid-cols-[1.1fr_0.9fr] lg:items-center">
-          <div>
+      <section id="inscricao" className="section-space bg-offer text-offer-foreground">
+        <div className="section-shell">
+          <div className="max-w-3xl">
             <p className="eyebrow-light">Seu próximo passo</p>
-            <h2 className="font-display text-4xl leading-tight font-medium sm:text-5xl lg:text-6xl">Reserve um espaço na agenda para trabalhar de forma mais inteligente.</h2>
-            <p className="mt-6 max-w-xl text-base leading-7 text-offer-muted">Uma experiência ao vivo, objetiva e conectada às decisões que você já precisa tomar todos os dias.</p>
-            <div className="mt-8 flex items-center gap-3 text-sm"><MonitorPlay className="size-5 text-coral" /><span>Online e ao vivo</span></div>
+            <h2 className="font-display text-4xl leading-[1.08] font-medium sm:text-5xl lg:text-6xl">Uma noite para transformar intenção em aplicação.</h2>
+            <p className="mt-5 max-w-2xl text-base leading-7 text-offer-muted">Reserve este momento para aprender a usar a Inteligência Artificial com mais clareza, critério e conexão com as necessidades reais do seu trabalho ou negócio.</p>
           </div>
-          <div className="rounded-lg bg-offer-card p-7 text-foreground sm:p-9">
-            <p className="text-xs font-semibold uppercase tracking-[0.15em] text-primary">Investimento</p>
-            <p className="mt-4 font-display text-4xl font-semibold">Valor a definir</p>
-            <p className="mt-3 text-sm leading-6 text-muted-foreground">Informação provisória — preço, condições de pagamento e link de inscrição ainda serão informados.</p>
-            <div className="mt-7"><Cta label="Tenho interesse" /></div>
-            <p className="mt-4 text-center text-xs text-muted-foreground">O botão será conectado ao canal de inscrição quando estiver definido.</p>
+
+          <div className="mt-10 grid gap-8 lg:mt-12 lg:grid-cols-[1.08fr_0.92fr] lg:items-stretch lg:gap-12">
+            <div className="flex flex-col">
+              <p className="text-xs font-semibold uppercase tracking-[0.15em] text-coral">Workshop online e ao vivo</p>
+              <dl className="mt-6 grid gap-5 sm:grid-cols-2">
+                <div className="flex gap-3">
+                  <CalendarDays className="mt-0.5 size-5 shrink-0 text-coral" aria-hidden="true" />
+                  <div><dt className="text-xs font-semibold uppercase tracking-[0.12em] text-offer-muted">Data</dt><dd className="mt-1 text-base font-medium">8 de outubro de 2026</dd></div>
+                </div>
+                <div className="flex gap-3">
+                  <Clock3 className="mt-0.5 size-5 shrink-0 text-coral" aria-hidden="true" />
+                  <div><dt className="text-xs font-semibold uppercase tracking-[0.12em] text-offer-muted">Horário</dt><dd className="mt-1 text-base font-medium">Das 19h às 22h</dd></div>
+                </div>
+                <div className="flex gap-3">
+                  <MonitorPlay className="mt-0.5 size-5 shrink-0 text-coral" aria-hidden="true" />
+                  <div><dt className="text-xs font-semibold uppercase tracking-[0.12em] text-offer-muted">Duração</dt><dd className="mt-1 text-base font-medium">3 horas de aplicação prática</dd></div>
+                </div>
+                <div className="flex gap-3">
+                  <FileText className="mt-0.5 size-5 shrink-0 text-coral" aria-hidden="true" />
+                  <div><dt className="text-xs font-semibold uppercase tracking-[0.12em] text-offer-muted">Acesso posterior</dt><dd className="mt-1 text-base font-medium">Gravação disponível por 7 dias</dd></div>
+                </div>
+              </dl>
+              <p className="mt-8 border-l-2 border-coral pl-4 font-display text-xl leading-snug text-offer-foreground sm:text-2xl">Você não precisa chegar sabendo. Precisa apenas trazer uma necessidade real que deseja melhorar.</p>
+            </div>
+
+            <div className="flex flex-col rounded-lg bg-offer-card p-7 text-foreground shadow-sm sm:p-9">
+              <p className="text-xs font-semibold uppercase tracking-[0.15em] text-primary">Investimento</p>
+              <p className="mt-4 font-display text-6xl leading-none font-semibold text-primary sm:text-7xl">R$ 147</p>
+              <p className="mt-3 text-sm font-medium text-foreground">Pagamento único</p>
+              <p className="mt-6 text-sm leading-6 text-muted-foreground">Sua inscrição inclui o encontro ao vivo, os exercícios guiados, o acesso ao portal durante o workshop e a gravação por sete dias.</p>
+              <div className="mt-7">
+                <Button asChild size="lg" className="h-14 w-full rounded-full px-6 text-sm font-semibold">
+                  <a href="#inscricao">QUERO GARANTIR MINHA VAGA <ArrowRight aria-hidden="true" /></a>
+                </Button>
+              </div>
+              <p className="mt-4 text-center text-xs leading-5 text-muted-foreground">Inscrição individual para o workshop online e ao vivo.</p>
+            </div>
           </div>
         </div>
       </section>
@@ -373,7 +403,7 @@ function Index() {
           <Sparkles className="mx-auto size-7" />
           <h2 className="mx-auto mt-5 max-w-3xl font-display text-4xl leading-tight font-medium sm:text-5xl">Comece a usar a IA com intenção, método e autonomia.</h2>
           <p className="mx-auto mt-5 max-w-xl text-sm leading-6 text-primary-foreground/80">Inscrições e informações completas em breve.</p>
-          <div className="mt-8"><Button asChild size="lg" variant="secondary" className="h-14 w-full rounded-full px-7 sm:w-auto"><a href="#investimento">Quero receber as informações <ArrowRight /></a></Button></div>
+          <div className="mt-8"><Button asChild size="lg" variant="secondary" className="h-14 w-full rounded-full px-7 sm:w-auto"><a href="#inscricao">Quero receber as informações <ArrowRight /></a></Button></div>
         </div>
       </section>
 
