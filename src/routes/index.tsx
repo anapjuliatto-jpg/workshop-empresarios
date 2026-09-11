@@ -114,7 +114,7 @@ function Index() {
             <div className="mt-4 grid grid-cols-1 gap-3 min-[360px]:grid-cols-2 min-[360px]:gap-2 min-[641px]:mt-6 min-[641px]:gap-3">
               <div className="flex min-w-0 items-start gap-2 border-l-2 border-primary pl-3 min-[641px]:gap-3 min-[641px]:pl-4">
                 <CalendarDays className="mt-0.5 size-4 shrink-0 text-primary min-[641px]:size-5" />
-                 <div className="min-w-0"><p className="text-[11px] font-semibold uppercase text-muted-foreground min-[641px]:text-xs">DATA</p><p className="mt-0.5 text-xs font-semibold min-[641px]:mt-1 min-[641px]:text-sm">8 de outubro de 2026</p></div>
+                  <div className="min-w-0"><p className="text-[11px] font-semibold uppercase text-muted-foreground min-[641px]:text-xs">DATA</p><p className="mt-0.5 text-xs font-semibold min-[641px]:mt-1 min-[641px]:text-sm"><span className="min-[641px]:hidden">8 de outubro<br />de 2026</span><span className="hidden min-[641px]:inline">8 de outubro de 2026</span></p></div>
               </div>
               <div className="flex min-w-0 items-start gap-2 border-l-2 border-primary pl-3 min-[641px]:gap-3 min-[641px]:pl-4">
                 <Clock3 className="mt-0.5 size-4 shrink-0 text-primary min-[641px]:size-5" />
@@ -128,14 +128,14 @@ function Index() {
           </div>
           <div className="relative aspect-[3/4] w-full overflow-hidden min-[641px]:aspect-auto min-[641px]:min-h-[520px] lg:min-h-full">
             <img src={heroImage} alt="Empresária trabalhando concentrada em um notebook" width={768} height={1024} className="absolute inset-0 h-full w-full scale-x-[-1] object-cover object-[center_32%]" />
-            <div className="absolute inset-x-0 bottom-0 bg-gradient-to-t from-foreground/65 to-transparent px-6 pb-8 pt-28 text-primary-foreground lg:px-10">
-               <p className="max-w-sm font-display text-2xl leading-tight">Menos perguntas soltas. Mais tarefas executadas com Inteligência Artificial.</p>
+             <div className="absolute inset-x-0 bottom-0 bg-gradient-to-t from-foreground/65 via-foreground/30 to-transparent px-6 pb-8 pt-24 text-primary-foreground min-[641px]:via-transparent min-[641px]:pt-28 lg:px-10">
+                <p className="max-w-sm font-display text-[22px] leading-[1.2] min-[641px]:text-2xl min-[641px]:leading-tight">Menos perguntas soltas. Mais tarefas executadas com Inteligência Artificial.</p>
             </div>
           </div>
         </div>
       </section>
 
-      <section className="section-space bg-surface-soft">
+       <section className="bg-surface-soft pb-[5.5rem] pt-12 min-[641px]:py-[5.5rem] lg:py-32">
         <div className="section-shell">
           <div className="mx-auto max-w-3xl text-center">
             <p className="eyebrow">Isso parece familiar?</p>
