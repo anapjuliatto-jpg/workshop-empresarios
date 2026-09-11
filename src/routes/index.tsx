@@ -166,7 +166,7 @@ function Index() {
               },
               {
                 title: "Uma tarefa real é executada",
-                text: "Use o ChatGPT para desenvolver uma entrega relacionada a uma necessidade verdadeira da sua rotina.",
+                text: "Desenvolva uma entrega relacionada a uma necessidade verdadeira da sua rotina, com orientação e aplicação prática.",
               },
               {
                 title: "Uma ideia vira protótipo",
@@ -182,7 +182,7 @@ function Index() {
         </div>
       </section>
 
-      <section className="pb-[5.5rem] pt-7 min-[641px]:pb-[5.5rem] min-[641px]:pt-10 lg:pb-32">
+      <section className="pb-6 pt-7 min-[641px]:pb-10 min-[641px]:pt-10">
         <div className="section-shell grid gap-12 lg:grid-cols-2 lg:items-start">
           <div className="lg:sticky lg:top-28">
             <p className="eyebrow">Para quem é</p>
@@ -197,7 +197,7 @@ function Index() {
         </div>
       </section>
 
-      <section className="section-space bg-surface-soft">
+      <section className="bg-surface-soft pb-[5.5rem] pt-7 min-[641px]:pb-[5.5rem] min-[641px]:pt-10 lg:pb-32">
         <div className="section-shell">
           <div className="max-w-3xl"><p className="eyebrow">Programação</p><h2 className="section-title">Uma jornada direta do entendimento à implementação.</h2></div>
           <div className="mt-12 divide-y divide-border border-y border-border">
