@@ -375,12 +375,17 @@ function Index() {
         </div>
       </section>
 
-      <section className="section-space">
-        <div className="section-shell flex flex-col items-center text-center">
-          <div className="grid size-16 place-items-center rounded-full bg-accent text-primary"><ShieldCheck className="size-8" /></div>
-          <p className="eyebrow mt-7">Garantia</p>
-          <h2 className="section-title max-w-3xl">Você poderá decidir com tranquilidade.</h2>
-          <p className="mt-5 max-w-2xl leading-7 text-muted-foreground">Informação provisória — prazo, critérios e condições da garantia a definir antes da abertura das inscrições.</p>
+      <section className="bg-background px-5 py-14 sm:px-10 sm:py-20">
+        <div className="mx-auto flex max-w-4xl flex-col items-center text-center">
+          <div className="grid size-14 place-items-center rounded-full bg-accent text-primary" aria-hidden="true"><ShieldCheck className="size-7" /></div>
+          <p className="eyebrow mt-5">Compra segura</p>
+          <h2 className="mt-3 max-w-3xl font-display text-[34px] leading-[1.08] font-medium text-foreground sm:text-5xl">Você tem 7 dias para decidir com tranquilidade.</h2>
+          <p className="mt-5 max-w-2xl text-base leading-7 text-foreground">Se mudar de ideia, você poderá solicitar o cancelamento e o reembolso integral em até 7 dias corridos após a confirmação da compra.</p>
+          <p className="mt-3 max-w-2xl text-sm leading-6 text-muted-foreground">A solicitação não exige justificativa e seguirá as condições previstas para compras realizadas online.</p>
+          <div className="mt-7 flex w-full max-w-xl flex-col justify-center gap-3 min-[360px]:flex-row">
+            <div className="flex min-h-14 flex-1 items-center justify-center border-y border-primary/30 px-4 py-3 text-sm font-semibold text-foreground">7 dias corridos após a compra</div>
+            <div className="flex min-h-14 flex-1 items-center justify-center border-y border-primary/30 px-4 py-3 text-sm font-semibold text-foreground">Reembolso integral</div>
+          </div>
         </div>
       </section>
 
