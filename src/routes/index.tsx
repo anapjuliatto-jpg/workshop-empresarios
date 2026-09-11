@@ -127,7 +127,7 @@ function Index() {
             </div>
           </div>
           <div className="relative min-h-[520px] overflow-hidden lg:min-h-full">
-            <img src={heroImage} alt="Empresária trabalhando concentrada em um notebook" width={768} height={1024} className="absolute inset-0 h-full w-full object-cover object-[center_32%]" />
+            <img src={heroImage} alt="Empresária trabalhando concentrada em um notebook" width={768} height={1024} className="absolute inset-0 h-full w-full scale-x-[-1] object-cover object-[center_32%]" />
             <div className="absolute inset-x-0 bottom-0 bg-gradient-to-t from-foreground/65 to-transparent px-6 pb-8 pt-28 text-primary-foreground lg:px-10">
                <p className="max-w-sm font-display text-2xl leading-tight">Menos perguntas soltas. Mais tarefas executadas com Inteligência Artificial.</p>
             </div>
