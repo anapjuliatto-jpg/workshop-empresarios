@@ -98,11 +98,6 @@ const includedBenefits = [
     title: "EXPERIÊNCIA COM PROTÓTIPO INTERATIVO",
     text: "Você acompanhará a transformação de uma ideia em uma experiência funcional e visualizará novas possibilidades para sua área.",
   },
-  {
-    icon: CheckCircle2,
-    title: "PLANO DE APLICAÇÃO",
-    text: "Ao final, você definirá os próximos usos da Inteligência Artificial que fazem sentido para sua rotina e suas prioridades.",
-  },
 ];
 
 function Cta({ label = "QUERO GARANTIR MINHA VAGA", compactMobile = false }: { label?: string; compactMobile?: boolean }) {
