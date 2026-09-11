@@ -45,10 +45,10 @@ export const Route = createFileRoute("/")({
 });
 
 const painPoints = [
-  "Você sabe que precisa usar IA, mas não encontra tempo para acompanhar cada nova ferramenta.",
-  "Já testou comandos prontos, mas ainda não conseguiu transformar isso em um processo consistente.",
-  "Tem muitas ideias e tarefas, porém falta clareza sobre o que automatizar primeiro.",
-  "Quer crescer com eficiência sem perder a qualidade, a estratégia ou a sua voz.",
+  "Você já usa IA para fazer perguntas, textos ou imagens — mas, na prática, sua rotina continua praticamente igual.",
+  "Toda semana surge uma nova ferramenta, e você não tem tempo para descobrir qual realmente vale a pena.",
+  "As respostas parecem genéricas, e você acaba revisando ou refazendo grande parte do trabalho.",
+  "Você sabe que poderia ganhar tempo, mas ainda não sabe o que delegar à IA e o que precisa continuar sob sua decisão.",
 ];
 
 const experiences = [
@@ -135,20 +135,23 @@ function Index() {
         </div>
       </section>
 
-       <section className="bg-surface-soft pb-[5.5rem] pt-12 min-[641px]:py-[5.5rem] lg:py-32">
+       <section className="bg-surface-soft py-12 min-[641px]:py-[5.5rem] lg:py-32">
         <div className="section-shell">
           <div className="mx-auto max-w-3xl text-center">
             <p className="eyebrow">Isso parece familiar?</p>
-            <h2 className="section-title">A IA promete economizar tempo. Mas aprender a usá-la virou mais uma tarefa.</h2>
+             <h2 className="mt-3 font-display text-[34px] leading-[1.08] font-medium [hyphens:none] [word-break:normal] min-[641px]:text-5xl min-[641px]:leading-[1.12]">A IA deveria economizar seu tempo. Mas aprender a usá-la virou mais uma tarefa.</h2>
           </div>
-          <div className="mt-12 grid gap-4 md:grid-cols-2">
+           <div className="mt-10 grid gap-[14px] min-[641px]:mt-12 min-[641px]:gap-4 md:auto-rows-fr md:grid-cols-2">
             {painPoints.map((pain, index) => (
-              <article key={pain} className="card-elevated flex min-h-40 items-start gap-5 p-6 sm:p-8">
+               <article key={pain} className="card-elevated flex h-auto items-start gap-4 p-[18px] min-[641px]:h-full min-[641px]:min-h-40 min-[641px]:gap-5 min-[641px]:p-8">
                 <span className="grid size-9 shrink-0 place-items-center rounded-full bg-primary text-sm font-semibold text-primary-foreground">{index + 1}</span>
-                <p className="pt-1 text-base leading-7 text-foreground">{pain}</p>
+                 <p className="pt-0.5 text-base leading-[1.45] text-foreground [hyphens:none] [word-break:normal] min-[641px]:pt-1 min-[641px]:leading-7">{pain}</p>
               </article>
             ))}
           </div>
+           <p className="mx-auto mt-8 max-w-2xl text-center text-base leading-[1.55] text-muted-foreground [hyphens:none] [word-break:normal] min-[641px]:mt-10 min-[641px]:text-lg">
+             Você não está atrasado. Só precisa de um caminho mais claro para transformar possibilidades em aplicações reais.
+           </p>
         </div>
       </section>
 
