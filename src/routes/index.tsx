@@ -72,9 +72,9 @@ const faqs = [
   ["Como receberei o acesso?", "Informação provisória — os detalhes de acesso serão definidos antes da abertura das inscrições."],
 ];
 
-function Cta({ label = "QUERO GARANTIR MINHA VAGA" }: { label?: string }) {
+function Cta({ label = "QUERO GARANTIR MINHA VAGA", compactMobile = false }: { label?: string; compactMobile?: boolean }) {
   return (
-    <Button asChild size="lg" className="h-14 w-full rounded-full px-6 text-sm font-semibold sm:w-auto">
+    <Button asChild size="lg" className={`${compactMobile ? "h-12 text-xs sm:h-14 sm:text-sm" : "h-14 text-sm"} w-full rounded-full px-6 font-semibold sm:w-auto`}>
       <a href="#investimento">
         {label}
         <ArrowRight aria-hidden="true" />
@@ -93,9 +93,9 @@ function Index() {
   return (
     <main className="overflow-hidden">
       <nav aria-label="Navegação principal" className="sticky top-0 z-50 border-b border-border/70 bg-background/95 backdrop-blur">
-        <div className="mx-auto grid max-w-7xl grid-cols-[minmax(0,1fr)_auto] items-center gap-4 px-5 py-3 lg:px-10">
-          <a href="#inicio" className="min-w-0 font-display text-sm font-semibold leading-tight text-foreground sm:text-xl">Inteligência Artificial para Empresários</a>
-          <Button asChild size="sm" className="rounded-full px-4">
+        <div className="mx-auto grid max-w-7xl grid-cols-[minmax(0,1fr)_auto] items-center gap-2 px-5 py-2 min-[641px]:gap-4 min-[641px]:py-3 lg:px-10">
+          <a href="#inicio" className="min-w-0 whitespace-nowrap font-display text-[13px] font-semibold leading-none text-foreground min-[641px]:text-xl"><span className="min-[641px]:hidden">IA para Empresários</span><span className="hidden min-[641px]:inline">Inteligência Artificial para Empresários</span></a>
+          <Button asChild size="sm" className="h-8 shrink-0 rounded-full px-3 text-xs min-[641px]:h-9 min-[641px]:px-4 min-[641px]:text-sm">
             <a href="#investimento">Inscrever-me</a>
           </Button>
         </div>
@@ -103,30 +103,30 @@ function Index() {
 
       <section id="inicio" className="relative border-b border-border/60">
         <div className="mx-auto grid max-w-7xl lg:min-h-[calc(100svh-61px)] lg:grid-cols-[0.92fr_1.08fr]">
-          <div className="flex flex-col justify-center px-5 py-12 sm:px-10 sm:py-14 lg:py-8">
-            <p className="mb-4 text-xs font-semibold uppercase tracking-[0.18em] text-primary">WORKSHOP ONLINE E AO VIVO</p>
-            <h1 className="max-w-2xl text-balance font-display text-[40px] leading-[1.02] font-medium text-foreground sm:text-5xl lg:text-[54px] lg:leading-none">
+          <div className="flex flex-col justify-center px-5 py-7 min-[360px]:py-8 min-[641px]:px-10 min-[641px]:py-14 lg:py-8">
+            <p className="mb-3 text-xs font-semibold uppercase tracking-[0.18em] text-primary min-[641px]:mb-4">WORKSHOP ONLINE E AO VIVO</p>
+            <h1 className="max-w-2xl text-balance font-display text-[34px] leading-[1.02] font-medium text-foreground min-[360px]:text-[36px] min-[420px]:text-[40px] min-[641px]:text-5xl lg:text-[54px] lg:leading-none">
               Você sabe que precisa usar IA. Só não tem tempo para descobrir tudo sozinho.
             </h1>
-            <p className="mt-4 max-w-xl text-base leading-7 text-muted-foreground sm:text-lg">
+            <p className="mt-3 max-w-xl text-base leading-[1.45] text-muted-foreground min-[641px]:mt-4 min-[641px]:text-lg min-[641px]:leading-7">
               Em uma única noite, saia do uso básico e aprenda a aplicar Inteligência Artificial em tarefas reais do seu trabalho ou negócio — com orientação, prática e sem precisar saber programação.
             </p>
-            <div className="mt-6 grid grid-cols-2 gap-3">
-              <div className="flex items-start gap-3 border-l-2 border-primary pl-4">
-                <CalendarDays className="mt-0.5 size-5 shrink-0 text-primary" />
-                 <div><p className="text-xs font-semibold uppercase text-muted-foreground">DATA</p><p className="mt-1 text-sm font-semibold">8 de outubro de 2026</p></div>
+            <div className="mt-4 grid grid-cols-1 gap-3 min-[360px]:grid-cols-2 min-[360px]:gap-2 min-[641px]:mt-6 min-[641px]:gap-3">
+              <div className="flex min-w-0 items-start gap-2 border-l-2 border-primary pl-3 min-[641px]:gap-3 min-[641px]:pl-4">
+                <CalendarDays className="mt-0.5 size-4 shrink-0 text-primary min-[641px]:size-5" />
+                 <div className="min-w-0"><p className="text-[11px] font-semibold uppercase text-muted-foreground min-[641px]:text-xs">DATA</p><p className="mt-0.5 text-xs font-semibold min-[641px]:mt-1 min-[641px]:text-sm">8 de outubro de 2026</p></div>
               </div>
-              <div className="flex items-start gap-3 border-l-2 border-primary pl-4">
-                <Clock3 className="mt-0.5 size-5 shrink-0 text-primary" />
-                 <div><p className="text-xs font-semibold uppercase text-muted-foreground">HORÁRIO</p><p className="mt-1 text-sm font-semibold">Das 19h às 22h</p></div>
+              <div className="flex min-w-0 items-start gap-2 border-l-2 border-primary pl-3 min-[641px]:gap-3 min-[641px]:pl-4">
+                <Clock3 className="mt-0.5 size-4 shrink-0 text-primary min-[641px]:size-5" />
+                 <div className="min-w-0"><p className="text-[11px] font-semibold uppercase text-muted-foreground min-[641px]:text-xs">HORÁRIO</p><p className="mt-0.5 text-xs font-semibold min-[641px]:mt-1 min-[641px]:text-sm">Das 19h às 22h</p></div>
               </div>
             </div>
-            <div className="mt-7">
-              <Cta />
-              <p className="mt-3 max-w-xl text-xs leading-5 text-muted-foreground">Online e ao vivo • 3 horas de aplicação prática • Gravação disponível por 7 dias</p>
+            <div className="mt-5 min-[641px]:mt-7">
+              <Cta compactMobile />
+              <p className="mx-auto mt-2 max-w-[350px] text-center text-[11px] leading-4 text-muted-foreground min-[641px]:mx-0 min-[641px]:mt-3 min-[641px]:max-w-xl min-[641px]:text-left min-[641px]:text-xs min-[641px]:leading-5">Online e ao vivo • 3 horas de aplicação prática • Gravação disponível por 7 dias</p>
             </div>
           </div>
-          <div className="relative min-h-[520px] overflow-hidden lg:min-h-full">
+          <div className="relative aspect-[3/4] w-full overflow-hidden min-[641px]:aspect-auto min-[641px]:min-h-[520px] lg:min-h-full">
             <img src={heroImage} alt="Empresária trabalhando concentrada em um notebook" width={768} height={1024} className="absolute inset-0 h-full w-full scale-x-[-1] object-cover object-[center_32%]" />
             <div className="absolute inset-x-0 bottom-0 bg-gradient-to-t from-foreground/65 to-transparent px-6 pb-8 pt-28 text-primary-foreground lg:px-10">
                <p className="max-w-sm font-display text-2xl leading-tight">Menos perguntas soltas. Mais tarefas executadas com Inteligência Artificial.</p>
