@@ -26,13 +26,13 @@ import {
 export const Route = createFileRoute("/")({
   head: () => ({
     meta: [
-      { title: "Workshop de IA para Negócios | Ao vivo" },
+      { title: "Inteligência Artificial para Empresários | Ao vivo" },
       {
         name: "description",
         content:
           "Workshop online e ao vivo para aplicar Inteligência Artificial ao trabalho e aos negócios com clareza e praticidade.",
       },
-      { property: "og:title", content: "Workshop de IA para Negócios | Ao vivo" },
+      { property: "og:title", content: "Inteligência Artificial para Empresários | Ao vivo" },
       {
         property: "og:description",
         content: "Aprenda a transformar IA em uma aliada prática para sua rotina e seu negócio.",
@@ -92,7 +92,7 @@ function Index() {
     <main className="overflow-hidden">
       <nav aria-label="Navegação principal" className="sticky top-0 z-50 border-b border-border/70 bg-background/95 backdrop-blur">
         <div className="mx-auto grid max-w-7xl grid-cols-[minmax(0,1fr)_auto] items-center gap-4 px-5 py-3 lg:px-10">
-          <a href="#inicio" className="min-w-0 font-display text-lg font-semibold text-foreground sm:text-xl">IA na Prática</a>
+          <a href="#inicio" className="min-w-0 font-display text-lg font-semibold text-foreground sm:text-xl">Inteligência Artificial para Empresários</a>
           <Button asChild size="sm" className="rounded-full px-4">
             <a href="#investimento">Inscrever-me</a>
           </Button>
@@ -280,7 +280,7 @@ function Index() {
       </section>
 
       <footer className="border-t border-border px-5 py-8 text-center text-xs text-muted-foreground">
-        <p>Workshop IA na Prática · Informações comerciais e legais a definir.</p>
+        <p>Inteligência Artificial para Empresários · Informações comerciais e legais a definir.</p>
       </footer>
     </main>
   );
