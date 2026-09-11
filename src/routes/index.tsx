@@ -187,10 +187,10 @@ function Index() {
           <div className="lg:sticky lg:top-28">
             <p className="eyebrow">Para quem é</p>
             <h2 className="section-title">Para quem lidera, decide e precisa fazer o tempo render.</h2>
-            <p className="mt-5 max-w-xl leading-7 text-muted-foreground">Sem excesso de termos técnicos. Sem a pressão de testar tudo. O foco é reconhecer oportunidades reais para o seu contexto.</p>
+            <p className="mt-5 max-w-xl leading-7 text-muted-foreground">Uma experiência para profissionais que querem transformar a Inteligência Artificial em apoio real para o trabalho, mesmo sem formação técnica.</p>
           </div>
           <ul className="space-y-3">
-            {["Empresários que querem modernizar a operação com critério.", "Empreendedores sobrecarregados por tarefas manuais e decisões.", "Profissionais autônomos que precisam produzir mais sem perder qualidade.", "Líderes que querem orientar suas equipes sobre o uso responsável da IA."].map((item) => (
+            {["Empresários e empreendedores responsáveis pelas decisões, pela operação e pelo crescimento do negócio.", "Profissionais autônomos e prestadores de serviço que precisam aumentar sua capacidade de entrega sem perder qualidade.", "Gestores e líderes que desejam aplicar Inteligência Artificial na rotina e orientar suas equipes com mais critério.", "Quem já experimentou Inteligência Artificial de forma básica e quer avançar para aplicações ligadas à própria atividade."].map((item) => (
               <li key={item} className="flex gap-4 rounded-lg border border-border bg-card p-5"><CheckCircle2 className="mt-0.5 size-5 shrink-0 text-primary" /><span className="leading-7">{item}</span></li>
             ))}
           </ul>
