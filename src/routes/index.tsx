@@ -2,6 +2,7 @@ import { createFileRoute } from "@tanstack/react-router";
 import {
   ArrowRight,
   CalendarDays,
+  CheckCircle2,
   ClipboardCheck,
   Clock3,
   Compass,
