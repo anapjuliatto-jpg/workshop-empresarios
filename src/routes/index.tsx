@@ -75,8 +75,8 @@ const includedBenefits = [
   },
   {
     icon: Compass,
-    title: "MÉTODO PASSO A PASSO",
-    text: "Um processo claro para sair da ideia, organizar o contexto e chegar a uma aplicação prática.",
+    title: "PLANO DE APLICAÇÃO",
+    text: "Ao final, você definirá os próximos usos da Inteligência Artificial que fazem sentido para sua rotina, seu negócio e suas prioridades.",
   },
   {
     icon: LayoutDashboard,
