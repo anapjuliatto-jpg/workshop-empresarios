@@ -10,7 +10,6 @@ import {
   LayoutDashboard,
   MonitorPlay,
   Presentation,
-  ShieldCheck,
   Sparkles,
   Target,
 } from "lucide-react";
@@ -375,16 +374,33 @@ function Index() {
         </div>
       </section>
 
-      <section className="bg-background px-5 py-14 sm:px-10 sm:py-20">
-        <div className="mx-auto flex max-w-4xl flex-col items-center text-center">
-          <div className="grid size-14 place-items-center rounded-full bg-accent text-primary" aria-hidden="true"><ShieldCheck className="size-7" /></div>
-          <p className="eyebrow mt-5">Compra segura</p>
-          <h2 className="mt-3 max-w-3xl font-display text-[34px] leading-[1.08] font-medium text-foreground sm:text-5xl">Você tem 7 dias para decidir com tranquilidade.</h2>
-          <p className="mt-5 max-w-2xl text-base leading-7 text-foreground">Se mudar de ideia, você poderá solicitar o cancelamento e o reembolso integral em até 7 dias corridos após a confirmação da compra.</p>
-          <p className="mt-3 max-w-2xl text-sm leading-6 text-muted-foreground">A solicitação não exige justificativa e seguirá as condições previstas para compras realizadas online.</p>
-          <div className="mt-7 flex w-full max-w-xl flex-col justify-center gap-3 min-[360px]:flex-row">
-            <div className="flex min-h-14 flex-1 items-center justify-center border-y border-primary/30 px-4 py-3 text-sm font-semibold text-foreground">7 dias corridos após a compra</div>
-            <div className="flex min-h-14 flex-1 items-center justify-center border-y border-primary/30 px-4 py-3 text-sm font-semibold text-foreground">Reembolso integral</div>
+      <section className="bg-guarantee px-5 py-12 text-guarantee-foreground sm:px-10 sm:py-16">
+        <div className="mx-auto grid max-w-5xl items-center gap-8 md:grid-cols-[240px_1fr] md:gap-14 lg:gap-20">
+          <div className="mx-auto size-[165px] md:size-[225px]" aria-label="Compra segura, reembolso integral em 7 dias">
+            <svg viewBox="0 0 240 240" className="size-full" role="img" aria-hidden="true">
+              <defs>
+                <path id="guarantee-seal-path" d="M 120,120 m -91,0 a 91,91 0 1,1 182,0 a 91,91 0 1,1 -182,0" />
+              </defs>
+              <circle cx="120" cy="120" r="112" fill="none" className="stroke-guarantee-accent" strokeWidth="2" />
+              <circle cx="120" cy="120" r="103" fill="none" className="stroke-guarantee-detail" strokeWidth="1" />
+              <circle cx="120" cy="120" r="91" fill="none" className="stroke-guarantee-accent" strokeWidth="1" />
+              <text className="fill-guarantee-detail text-[12px] font-semibold uppercase tracking-[0.17em]">
+                <textPath href="#guarantee-seal-path" startOffset="2%">COMPRA SEGURA • REEMBOLSO INTEGRAL</textPath>
+              </text>
+              <text x="120" y="131" textAnchor="middle" className="fill-guarantee-foreground font-display text-[92px] font-medium">7</text>
+              <text x="120" y="163" textAnchor="middle" className="fill-guarantee-detail text-[15px] font-semibold uppercase tracking-[0.24em]">DIAS</text>
+            </svg>
+          </div>
+
+          <div className="text-center md:text-left">
+            <p className="text-xs font-semibold uppercase tracking-[0.18em] text-guarantee-detail">Compra segura</p>
+            <h2 className="mt-3 max-w-3xl font-display text-[34px] leading-[1.08] font-medium md:text-5xl">Você tem 7 dias para decidir com tranquilidade.</h2>
+            <p className="mt-5 max-w-2xl text-base leading-7">Se mudar de ideia, você poderá solicitar o cancelamento e o reembolso integral em até 7 dias corridos após a confirmação da compra.</p>
+            <p className="mt-3 max-w-2xl text-sm leading-6 text-guarantee-detail">A solicitação não exige justificativa e seguirá as condições previstas para compras realizadas online.</p>
+            <div className="mt-7 grid gap-3 min-[380px]:grid-cols-2">
+              <div className="flex min-h-14 items-center justify-center border border-guarantee-accent/70 bg-guarantee-card px-4 py-3 text-center text-sm font-semibold">7 dias corridos após a compra</div>
+              <div className="flex min-h-14 items-center justify-center border border-guarantee-accent/70 bg-guarantee-card px-4 py-3 text-center text-sm font-semibold">Reembolso integral</div>
+            </div>
           </div>
         </div>
       </section>
