@@ -4,10 +4,16 @@ import {
   CalendarDays,
   Check,
   CheckCircle2,
+  ClipboardCheck,
   Clock3,
+  Compass,
+  FileText,
+  LayoutDashboard,
   MonitorPlay,
+  Presentation,
   ShieldCheck,
   Sparkles,
+  Target,
 } from "lucide-react";
 
 import heroImageAsset from "@/assets/especialista-workshop.png.asset.json";
@@ -60,6 +66,44 @@ const faqs = [
   ["Qual é a data e o horário?", "Informação provisória — data e horário a definir."],
   ["Haverá gravação?", "Informação provisória — disponibilidade e prazo de acesso à gravação a definir."],
   ["Como receberei o acesso?", "Informação provisória — os detalhes de acesso serão definidos antes da abertura das inscrições."],
+];
+
+const includedBenefits = [
+  {
+    icon: Presentation,
+    title: "ENCONTRO ONLINE E AO VIVO",
+    text: "Três horas de orientação, demonstrações e aplicação prática, com espaço para acompanhar cada etapa.",
+  },
+  {
+    icon: Compass,
+    title: "MÉTODO PASSO A PASSO",
+    text: "Um processo claro para sair da ideia, organizar o contexto e chegar a uma aplicação prática.",
+  },
+  {
+    icon: LayoutDashboard,
+    title: "PORTAL EXCLUSIVO DO WORKSHOP",
+    text: "Um ambiente organizado com instruções, perguntas e prompts para você executar os exercícios sem se perder.",
+  },
+  {
+    icon: FileText,
+    title: "DOCUMENTO MESTRE PERSONALIZADO",
+    text: "Você criará uma base com informações sobre sua atividade, objetivos e contexto para obter respostas mais úteis da IA.",
+  },
+  {
+    icon: Target,
+    title: "EXERCÍCIO APLICADO À SUA REALIDADE",
+    text: "Em vez de trabalhar apenas com exemplos genéricos, você desenvolverá uma entrega ligada a uma necessidade do seu próprio negócio ou trabalho.",
+  },
+  {
+    icon: ClipboardCheck,
+    title: "EXPERIÊNCIA COM PROTÓTIPO INTERATIVO",
+    text: "Você acompanhará a transformação de uma ideia em uma experiência funcional e visualizará novas possibilidades para sua área.",
+  },
+  {
+    icon: CheckCircle2,
+    title: "PLANO DE APLICAÇÃO",
+    text: "Ao final, você definirá os próximos usos da Inteligência Artificial que fazem sentido para sua rotina e suas prioridades.",
+  },
 ];
 
 function Cta({ label = "QUERO GARANTIR MINHA VAGA", compactMobile = false }: { label?: string; compactMobile?: boolean }) {
@@ -251,11 +295,40 @@ function Index() {
 
       <section className="section-space bg-secondary">
         <div className="section-shell">
-          <div className="mx-auto max-w-3xl text-center"><p className="eyebrow">Tudo que está incluído</p><h2 className="section-title">O essencial para aprender, praticar e continuar avançando.</h2></div>
-          <div className="mx-auto mt-12 grid max-w-4xl gap-3 sm:grid-cols-2">
-            {["Encontro online e ao vivo", "Exercícios guiados", "Material de apoio — a definir", "Acesso à gravação — a definir", "Canal de suporte — a definir", "Certificado — a definir"].map((item) => (
-              <div key={item} className="flex items-center gap-3 rounded-lg bg-card p-5 shadow-sm"><span className="grid size-7 shrink-0 place-items-center rounded-full bg-accent text-primary"><Check className="size-4" /></span><span className="text-sm font-medium">{item}</span></div>
+          <div className="mx-auto max-w-3xl text-center">
+            <p className="eyebrow">Tudo que está incluído</p>
+            <h2 className="section-title [hyphens:none] [word-break:normal]">Você não vai apenas assistir. Vai construir e aplicar.</h2>
+            <p className="mx-auto mt-5 max-w-2xl text-base leading-7 text-muted-foreground [hyphens:none] [word-break:normal] min-[641px]:text-lg">
+              Uma experiência guiada para transformar uma necessidade real do seu trabalho ou negócio em uma aplicação prática de Inteligência Artificial.
+            </p>
+          </div>
+
+          <div className="mt-10 grid gap-[14px] md:grid-cols-2 lg:mt-12 lg:grid-cols-3 lg:auto-rows-fr">
+            {includedBenefits.map(({ icon: Icon, title, text }) => (
+              <article key={title} className="flex h-auto flex-col rounded-lg border border-border bg-card p-5 shadow-sm min-[641px]:p-[22px] lg:h-full">
+                <span className="grid size-10 shrink-0 place-items-center rounded-full bg-accent text-primary" aria-hidden="true">
+                  <Icon className="size-5" />
+                </span>
+                <h3 className="mt-5 font-display text-xl leading-tight font-semibold [hyphens:none] [word-break:normal] min-[641px]:text-2xl">{title}</h3>
+                <p className="mt-3 text-base leading-[1.5] text-muted-foreground [hyphens:none] [word-break:normal] min-[641px]:text-[17px]">{text}</p>
+              </article>
             ))}
+          </div>
+
+          <div className="mt-8 border-y border-primary/30 bg-background/55 px-5 py-6 min-[641px]:mt-10 min-[641px]:px-8 min-[641px]:py-7">
+            <div className="mx-auto flex max-w-5xl flex-col gap-3 min-[641px]:flex-row min-[641px]:items-center min-[641px]:gap-8">
+              <div className="flex shrink-0 items-center gap-3 text-primary">
+                <MonitorPlay className="size-6" aria-hidden="true" />
+                <h3 className="font-display text-xl font-semibold leading-tight [hyphens:none] [word-break:normal] min-[641px]:text-2xl">GRAVAÇÃO DISPONÍVEL POR 7 DIAS</h3>
+              </div>
+              <p className="text-base leading-[1.55] text-muted-foreground [hyphens:none] [word-break:normal]">
+                Você poderá rever as demonstrações e retomar os principais aprendizados com mais tranquilidade durante os sete dias seguintes ao encontro.
+              </p>
+            </div>
+          </div>
+
+          <div className="mt-8 flex justify-center min-[641px]:mt-10">
+            <Cta />
           </div>
         </div>
       </section>
