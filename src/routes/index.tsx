@@ -72,7 +72,7 @@ const faqs = [
   ["Como receberei o acesso?", "Informação provisória — os detalhes de acesso serão definidos antes da abertura das inscrições."],
 ];
 
-function Cta({ label = "Quero participar do workshop" }: { label?: string }) {
+function Cta({ label = "QUERO GARANTIR MINHA VAGA" }: { label?: string }) {
   return (
     <Button asChild size="lg" className="h-14 w-full rounded-full px-6 text-sm font-semibold sm:w-auto">
       <a href="#investimento">
@@ -92,7 +92,7 @@ function Index() {
     <main className="overflow-hidden">
       <nav aria-label="Navegação principal" className="sticky top-0 z-50 border-b border-border/70 bg-background/95 backdrop-blur">
         <div className="mx-auto grid max-w-7xl grid-cols-[minmax(0,1fr)_auto] items-center gap-4 px-5 py-3 lg:px-10">
-          <a href="#inicio" className="min-w-0 font-display text-lg font-semibold text-foreground sm:text-xl">Inteligência Artificial para Empresários</a>
+          <a href="#inicio" className="min-w-0 font-display text-sm font-semibold leading-tight text-foreground sm:text-xl">Inteligência Artificial para Empresários</a>
           <Button asChild size="sm" className="rounded-full px-4">
             <a href="#investimento">Inscrever-me</a>
           </Button>
@@ -102,29 +102,32 @@ function Index() {
       <section id="inicio" className="relative border-b border-border/60">
         <div className="mx-auto grid max-w-7xl lg:min-h-[760px] lg:grid-cols-[0.92fr_1.08fr]">
           <div className="flex flex-col justify-center px-5 py-16 sm:px-10 lg:py-24">
-            <p className="mb-6 text-xs font-semibold uppercase tracking-[0.18em] text-primary">Workshop online e ao vivo</p>
+            <p className="mb-6 text-xs font-semibold uppercase tracking-[0.18em] text-primary">WORKSHOP ONLINE E AO VIVO</p>
             <h1 className="max-w-2xl font-display text-5xl leading-[1.03] font-medium text-foreground sm:text-6xl lg:text-7xl">
-              Transforme a IA em uma aliada real do seu negócio.
+              Você sabe que precisa usar IA. Só não tem tempo para descobrir tudo sozinho.
             </h1>
             <p className="mt-6 max-w-xl text-base leading-7 text-muted-foreground sm:text-lg">
-              Um encontro prático para empresários e empreendedores que querem ganhar clareza, tempo e eficiência — sem precisar acompanhar toda novidade do mercado.
+              Em uma única noite, saia do uso básico e aprenda a aplicar Inteligência Artificial em tarefas reais do seu trabalho ou negócio — com orientação, prática e sem precisar saber programação.
             </p>
             <div className="mt-8 grid gap-3 sm:grid-cols-2">
               <div className="flex items-start gap-3 border-l-2 border-primary pl-4">
                 <CalendarDays className="mt-0.5 size-5 shrink-0 text-primary" />
-                <div><p className="text-xs font-semibold uppercase text-muted-foreground">Data</p><p className="mt-1 text-sm font-semibold">Informação provisória — a definir</p></div>
+                 <div><p className="text-xs font-semibold uppercase text-muted-foreground">DATA</p><p className="mt-1 text-sm font-semibold">8 de outubro de 2026</p></div>
               </div>
               <div className="flex items-start gap-3 border-l-2 border-primary pl-4">
                 <Clock3 className="mt-0.5 size-5 shrink-0 text-primary" />
-                <div><p className="text-xs font-semibold uppercase text-muted-foreground">Horário</p><p className="mt-1 text-sm font-semibold">Informação provisória — a definir</p></div>
+                 <div><p className="text-xs font-semibold uppercase text-muted-foreground">HORÁRIO</p><p className="mt-1 text-sm font-semibold">Das 19h às 22h</p></div>
               </div>
             </div>
-            <div className="mt-9"><Cta /></div>
+            <div className="mt-9">
+              <Cta />
+              <p className="mt-3 max-w-xl text-xs leading-5 text-muted-foreground">Online e ao vivo • 3 horas de aplicação prática • Gravação disponível por 7 dias</p>
+            </div>
           </div>
           <div className="relative min-h-[520px] overflow-hidden lg:min-h-full">
             <img src={heroImage} alt="Empresária trabalhando concentrada em um notebook" width={1024} height={1280} className="absolute inset-0 h-full w-full object-cover object-center" />
             <div className="absolute inset-x-0 bottom-0 bg-gradient-to-t from-foreground/65 to-transparent px-6 pb-8 pt-28 text-primary-foreground lg:px-10">
-              <p className="max-w-sm font-display text-2xl leading-tight">Menos ruído. Mais direção para aplicar o que realmente importa.</p>
+               <p className="max-w-sm font-display text-2xl leading-tight">Menos perguntas soltas. Mais tarefas executadas com Inteligência Artificial.</p>
             </div>
           </div>
         </div>
