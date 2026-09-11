@@ -19,6 +19,8 @@
  */
 
 @theme inline {
+  --font-sans: "Poppins", sans-serif;
+  --font-display: "Playfair Display", serif;
   --radius-sm: calc(var(--radius) - 4px);
   --radius-md: calc(var(--radius) - 2px);
   --radius-lg: var(--radius);
@@ -62,26 +64,32 @@
 }
 
 :root {
-  --radius: 0.625rem;
-  --background: oklch(1 0 0);
-  --foreground: oklch(0.129 0.042 264.695);
+  --radius: 0.5rem;
+  --background: oklch(0.98 0.016 55);
+  --foreground: oklch(0.16 0.025 45);
   --card: oklch(1 0 0);
-  --card-foreground: oklch(0.129 0.042 264.695);
+  --card-foreground: oklch(0.16 0.025 45);
   --popover: oklch(1 0 0);
-  --popover-foreground: oklch(0.129 0.042 264.695);
-  --primary: oklch(0.208 0.042 265.755);
-  --primary-foreground: oklch(0.984 0.003 247.858);
-  --secondary: oklch(0.968 0.007 247.896);
-  --secondary-foreground: oklch(0.208 0.042 265.755);
-  --muted: oklch(0.968 0.007 247.896);
-  --muted-foreground: oklch(0.554 0.046 257.417);
-  --accent: oklch(0.968 0.007 247.896);
-  --accent-foreground: oklch(0.208 0.042 265.755);
+  --popover-foreground: oklch(0.16 0.025 45);
+  --primary: oklch(0.54 0.15 42);
+  --primary-foreground: oklch(1 0 0);
+  --secondary: oklch(0.9 0.06 56);
+  --secondary-foreground: oklch(0.31 0.07 44);
+  --muted: oklch(0.94 0.026 55);
+  --muted-foreground: oklch(0.42 0.035 47);
+  --accent: oklch(0.92 0.052 54);
+  --accent-foreground: oklch(0.48 0.13 42);
   --destructive: oklch(0.577 0.245 27.325);
   --destructive-foreground: oklch(0.984 0.003 247.858);
-  --border: oklch(0.929 0.013 255.508);
-  --input: oklch(0.929 0.013 255.508);
-  --ring: oklch(0.704 0.04 256.788);
+  --border: oklch(0.86 0.035 54);
+  --input: oklch(0.86 0.035 54);
+  --ring: oklch(0.54 0.15 42);
+  --surface-soft: oklch(0.96 0.022 55);
+  --offer: oklch(0.18 0.028 46);
+  --offer-foreground: oklch(0.98 0.016 55);
+  --offer-muted: oklch(0.8 0.025 52);
+  --offer-card: oklch(0.98 0.016 55);
+  --coral: oklch(0.65 0.12 46);
   --chart-1: oklch(0.646 0.222 41.116);
   --chart-2: oklch(0.6 0.118 184.704);
   --chart-3: oklch(0.398 0.07 227.392);
@@ -140,5 +148,74 @@
   body {
     background-color: var(--color-background);
     color: var(--color-foreground);
+    font-family: var(--font-sans);
+    letter-spacing: 0;
+    text-rendering: optimizeLegibility;
   }
+
+  html { scroll-behavior: smooth; }
+  ::selection { background: var(--secondary); color: var(--foreground); }
+}
+
+@theme inline {
+  --color-surface-soft: var(--surface-soft);
+  --color-offer: var(--offer);
+  --color-offer-foreground: var(--offer-foreground);
+  --color-offer-muted: var(--offer-muted);
+  --color-offer-card: var(--offer-card);
+  --color-coral: var(--coral);
+}
+
+@utility section-shell {
+  width: 100%;
+  max-width: 80rem;
+  margin-inline: auto;
+  padding-inline: 1.25rem;
+  @media (width >= 40rem) { padding-inline: 2.5rem; }
+}
+
+@utility section-space {
+  padding-block: 5.5rem;
+  @media (width >= 64rem) { padding-block: 8rem; }
+}
+
+@utility section-title {
+  margin-top: 0.75rem;
+  font-family: var(--font-display);
+  font-size: 2.25rem;
+  line-height: 1.12;
+  font-weight: 500;
+  @media (width >= 40rem) { font-size: 3rem; }
+}
+
+@utility eyebrow {
+  font-size: 0.75rem;
+  line-height: 1rem;
+  font-weight: 600;
+  text-transform: uppercase;
+  letter-spacing: 0.16em;
+  color: var(--primary);
+}
+
+@utility eyebrow-light {
+  font-size: 0.75rem;
+  line-height: 1rem;
+  font-weight: 600;
+  text-transform: uppercase;
+  letter-spacing: 0.16em;
+  color: var(--coral);
+}
+
+@utility card-elevated {
+  border-radius: var(--radius);
+  border: 1px solid var(--border);
+  background: var(--card);
+  box-shadow: 0 18px 50px -35px color-mix(in oklab, var(--foreground) 35%, transparent);
+}
+
+@utility expert-portrait {
+  background:
+    linear-gradient(145deg, color-mix(in oklab, var(--secondary) 82%, transparent), transparent 70%),
+    repeating-linear-gradient(90deg, transparent 0 32px, color-mix(in oklab, var(--primary) 12%, transparent) 33px 34px),
+    var(--surface-soft);
 }
