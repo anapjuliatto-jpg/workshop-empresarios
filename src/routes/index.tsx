@@ -197,7 +197,7 @@ function Index() {
         </div>
       </section>
 
-      <section className="bg-surface-soft pb-[5.5rem] pt-7 min-[641px]:pb-[5.5rem] min-[641px]:pt-10 lg:pb-32">
+      <section className="bg-surface-soft pb-6 pt-7 min-[641px]:pb-10 min-[641px]:pt-10">
         <div className="section-shell">
           <div className="max-w-3xl"><p className="eyebrow">Programação</p><h2 className="section-title">Uma noite para sair do uso básico e começar a aplicar.</h2></div>
           <div className="mt-12 divide-y divide-border border-y border-border">
@@ -210,7 +210,7 @@ function Index() {
         </div>
       </section>
 
-      <section className="section-space">
+      <section className="pb-[5.5rem] pt-7 min-[641px]:pt-10 lg:pb-32">
         <div className="section-shell grid overflow-hidden rounded-lg border border-border bg-card lg:grid-cols-[0.72fr_1.28fr]">
           <div className="expert-portrait min-h-80 lg:min-h-[520px]" role="img" aria-label="Espaço reservado para fotografia da especialista" />
           <div className="flex flex-col justify-center p-7 sm:p-12 lg:p-16">
