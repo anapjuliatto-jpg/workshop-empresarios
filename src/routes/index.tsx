@@ -327,39 +327,39 @@ function Index() {
         </div>
       </section>
 
-      <section id="inscricao" className="section-space bg-offer text-offer-foreground max-[640px]:pt-14">
-        <div className="section-shell">
+      <section id="inscricao" className="section-space bg-surface-soft text-foreground max-[640px]:py-0 min-[641px]:bg-offer min-[641px]:text-offer-foreground">
+        <div className="section-shell max-[640px]:px-5 max-[640px]:pt-14 max-[640px]:pb-12">
           <div className="max-w-3xl">
-            <p className="eyebrow-light">Seu próximo passo</p>
-            <h2 className="font-display text-4xl leading-[1.08] font-medium sm:text-5xl lg:text-6xl">Uma noite para transformar intenção em aplicação.</h2>
-            <p className="mt-5 max-w-2xl text-base leading-7 text-offer-muted">Reserve este momento para aprender a usar a Inteligência Artificial com mais clareza, critério e conexão com as necessidades reais do seu trabalho ou negócio.</p>
+            <p className="eyebrow-light max-[640px]:text-primary">Seu próximo passo</p>
+            <h2 className="font-display text-[38px] leading-[1.07] font-medium min-[641px]:text-5xl min-[641px]:leading-[1.08] lg:text-6xl">Uma noite para transformar intenção em aplicação.</h2>
+            <p className="mt-5 max-w-2xl text-base leading-7 text-muted-foreground min-[641px]:text-offer-muted">Reserve este momento para aprender a usar a Inteligência Artificial com mais clareza, critério e conexão com as necessidades reais do seu trabalho ou negócio.</p>
           </div>
 
-          <div className="mt-10 grid gap-8 lg:mt-12 lg:grid-cols-[1.08fr_0.92fr] lg:items-stretch lg:gap-12">
+          <div className="mt-8 grid gap-8 min-[641px]:mt-10 lg:mt-12 lg:grid-cols-[1.08fr_0.92fr] lg:items-stretch lg:gap-12">
             <div className="flex flex-col">
               <p className="text-xs font-semibold uppercase tracking-[0.15em] text-coral">Workshop online e ao vivo</p>
-              <dl className="mt-6 grid gap-5 max-[640px]:grid-cols-2 sm:grid-cols-2">
-                <div className="flex min-w-0 gap-3">
+              <dl className="mt-4 overflow-hidden rounded-lg border border-border bg-card px-5 shadow-sm min-[641px]:mt-6 min-[641px]:grid min-[641px]:grid-cols-2 min-[641px]:gap-5 min-[641px]:overflow-visible min-[641px]:rounded-none min-[641px]:border-0 min-[641px]:bg-transparent min-[641px]:px-0 min-[641px]:shadow-none">
+                <div className="flex min-w-0 gap-3 py-5 min-[641px]:py-0">
                   <CalendarDays className="mt-0.5 size-5 shrink-0 text-coral" aria-hidden="true" />
-                  <div className="min-w-0"><dt className="text-xs font-semibold uppercase tracking-[0.12em] text-offer-muted">Data</dt><dd className="mt-1 text-base font-medium">8 de outubro de 2026</dd></div>
+                  <div className="min-w-0"><dt className="text-xs font-semibold uppercase tracking-[0.12em] text-muted-foreground min-[641px]:text-offer-muted">Data</dt><dd className="mt-1 text-base font-medium">8 de outubro de 2026</dd></div>
                 </div>
-                <div className="flex min-w-0 gap-3">
+                <div className="flex min-w-0 gap-3 border-t border-border py-5 min-[641px]:border-0 min-[641px]:py-0">
                   <Clock3 className="mt-0.5 size-5 shrink-0 text-coral" aria-hidden="true" />
-                  <div className="min-w-0"><dt className="text-xs font-semibold uppercase tracking-[0.12em] text-offer-muted">Horário</dt><dd className="mt-1 text-base font-medium">Das 19h às 22h</dd></div>
+                  <div className="min-w-0"><dt className="text-xs font-semibold uppercase tracking-[0.12em] text-muted-foreground min-[641px]:text-offer-muted">Horário</dt><dd className="mt-1 text-base font-medium">Das 19h às 22h</dd></div>
                 </div>
-                <div className="flex min-w-0 gap-3">
+                <div className="flex min-w-0 gap-3 border-t border-border py-5 min-[641px]:border-0 min-[641px]:py-0">
                   <MonitorPlay className="mt-0.5 size-5 shrink-0 text-coral" aria-hidden="true" />
-                  <div className="min-w-0"><dt className="text-xs font-semibold uppercase tracking-[0.12em] text-offer-muted">Duração</dt><dd className="mt-1 text-base font-medium">3 horas de aplicação prática</dd></div>
+                  <div className="min-w-0"><dt className="text-xs font-semibold uppercase tracking-[0.12em] text-muted-foreground min-[641px]:text-offer-muted">Duração</dt><dd className="mt-1 text-base font-medium">3 horas de aplicação prática</dd></div>
                 </div>
-                <div className="flex min-w-0 gap-3">
+                <div className="flex min-w-0 gap-3 border-t border-border py-5 min-[641px]:border-0 min-[641px]:py-0">
                   <FileText className="mt-0.5 size-5 shrink-0 text-coral" aria-hidden="true" />
-                  <div className="min-w-0"><dt className="text-xs font-semibold uppercase tracking-[0.12em] text-offer-muted">Acesso posterior</dt><dd className="mt-1 text-base font-medium">Gravação disponível por 7 dias</dd></div>
+                  <div className="min-w-0"><dt className="text-xs font-semibold uppercase tracking-[0.12em] text-muted-foreground min-[641px]:text-offer-muted">Acesso posterior</dt><dd className="mt-1 text-base font-medium">Gravação disponível por 7 dias</dd></div>
                 </div>
               </dl>
-              <p className="mt-8 border-l-2 border-coral pl-4 font-display text-xl leading-snug text-offer-foreground sm:text-2xl">Você não precisa chegar sabendo. Precisa apenas trazer uma necessidade real que deseja melhorar.</p>
+              <p className="mt-8 rounded-lg bg-accent px-5 py-5 font-display text-xl leading-snug text-foreground min-[641px]:rounded-none min-[641px]:border-l-2 min-[641px]:border-coral min-[641px]:bg-transparent min-[641px]:py-0 min-[641px]:pl-4 min-[641px]:text-offer-foreground sm:text-2xl">Você não precisa chegar sabendo. Precisa apenas trazer uma necessidade real que deseja melhorar.</p>
             </div>
 
-            <div className="flex flex-col rounded-lg bg-offer-card p-7 text-foreground shadow-sm sm:p-9">
+            <div className="flex flex-col rounded-lg border border-primary/35 bg-offer-card p-7 text-foreground shadow-sm min-[641px]:border-0 sm:p-9">
               <p className="text-xs font-semibold uppercase tracking-[0.15em] text-primary">Investimento</p>
               <p className="mt-4 font-display text-6xl leading-none font-semibold text-primary sm:text-7xl">R$ 147</p>
               <p className="mt-3 text-sm font-medium text-foreground">Pagamento único</p>
