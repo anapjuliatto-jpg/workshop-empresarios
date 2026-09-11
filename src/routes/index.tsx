@@ -287,7 +287,7 @@ function Index() {
         </div>
       </section>
 
-      <section className="section-space bg-secondary">
+      <section className="section-space bg-secondary max-[640px]:pb-10">
         <div className="section-shell">
           <div className="mx-auto max-w-3xl text-center">
             <p className="eyebrow">Tudo que está incluído</p>
@@ -327,7 +327,7 @@ function Index() {
         </div>
       </section>
 
-      <section id="inscricao" className="section-space bg-offer text-offer-foreground">
+      <section id="inscricao" className="section-space bg-offer text-offer-foreground max-[640px]:pt-14">
         <div className="section-shell">
           <div className="max-w-3xl">
             <p className="eyebrow-light">Seu próximo passo</p>
@@ -338,22 +338,22 @@ function Index() {
           <div className="mt-10 grid gap-8 lg:mt-12 lg:grid-cols-[1.08fr_0.92fr] lg:items-stretch lg:gap-12">
             <div className="flex flex-col">
               <p className="text-xs font-semibold uppercase tracking-[0.15em] text-coral">Workshop online e ao vivo</p>
-              <dl className="mt-6 grid gap-5 sm:grid-cols-2">
-                <div className="flex gap-3">
+              <dl className="mt-6 grid gap-5 max-[640px]:grid-cols-2 sm:grid-cols-2">
+                <div className="flex min-w-0 gap-3">
                   <CalendarDays className="mt-0.5 size-5 shrink-0 text-coral" aria-hidden="true" />
-                  <div><dt className="text-xs font-semibold uppercase tracking-[0.12em] text-offer-muted">Data</dt><dd className="mt-1 text-base font-medium">8 de outubro de 2026</dd></div>
+                  <div className="min-w-0"><dt className="text-xs font-semibold uppercase tracking-[0.12em] text-offer-muted">Data</dt><dd className="mt-1 text-base font-medium">8 de outubro de 2026</dd></div>
                 </div>
-                <div className="flex gap-3">
+                <div className="flex min-w-0 gap-3">
                   <Clock3 className="mt-0.5 size-5 shrink-0 text-coral" aria-hidden="true" />
-                  <div><dt className="text-xs font-semibold uppercase tracking-[0.12em] text-offer-muted">Horário</dt><dd className="mt-1 text-base font-medium">Das 19h às 22h</dd></div>
+                  <div className="min-w-0"><dt className="text-xs font-semibold uppercase tracking-[0.12em] text-offer-muted">Horário</dt><dd className="mt-1 text-base font-medium">Das 19h às 22h</dd></div>
                 </div>
-                <div className="flex gap-3">
+                <div className="flex min-w-0 gap-3">
                   <MonitorPlay className="mt-0.5 size-5 shrink-0 text-coral" aria-hidden="true" />
-                  <div><dt className="text-xs font-semibold uppercase tracking-[0.12em] text-offer-muted">Duração</dt><dd className="mt-1 text-base font-medium">3 horas de aplicação prática</dd></div>
+                  <div className="min-w-0"><dt className="text-xs font-semibold uppercase tracking-[0.12em] text-offer-muted">Duração</dt><dd className="mt-1 text-base font-medium">3 horas de aplicação prática</dd></div>
                 </div>
-                <div className="flex gap-3">
+                <div className="flex min-w-0 gap-3">
                   <FileText className="mt-0.5 size-5 shrink-0 text-coral" aria-hidden="true" />
-                  <div><dt className="text-xs font-semibold uppercase tracking-[0.12em] text-offer-muted">Acesso posterior</dt><dd className="mt-1 text-base font-medium">Gravação disponível por 7 dias</dd></div>
+                  <div className="min-w-0"><dt className="text-xs font-semibold uppercase tracking-[0.12em] text-offer-muted">Acesso posterior</dt><dd className="mt-1 text-base font-medium">Gravação disponível por 7 dias</dd></div>
                 </div>
               </dl>
               <p className="mt-8 border-l-2 border-coral pl-4 font-display text-xl leading-snug text-offer-foreground sm:text-2xl">Você não precisa chegar sabendo. Precisa apenas trazer uma necessidade real que deseja melhorar.</p>
