@@ -49,10 +49,10 @@ const painPoints = [
 ];
 
 const schedule = [
-  ["01", "Fundamentos sem complicação", "Entenda como pensar com IA e escolher a ferramenta certa para cada objetivo."],
-  ["02", "Produtividade e operação", "Organize processos, sintetize informações e ganhe agilidade nas tarefas do dia a dia."],
-  ["03", "Comunicação e crescimento", "Use IA para apoiar conteúdo, vendas e decisões sem abrir mão da sua identidade."],
-  ["04", "Próximos passos", "Monte um plano realista para continuar aplicando o método depois do encontro."],
+  ["01", "IDENTIFIQUE ONDE A IA FAZ SENTIDO", "Reconheça tarefas, gargalos e oportunidades em que a Inteligência Artificial pode gerar ganho real de tempo e produtividade."],
+  ["02", "APRENDA A ORIENTAR A IA", "Organize as informações e o contexto necessários para receber respostas mais úteis, personalizadas e aplicáveis."],
+  ["03", "TRANSFORME UMA NECESSIDADE EM ENTREGA", "Trabalhe uma situação verdadeira da sua rotina e acompanhe a construção de um resultado prático durante o encontro."],
+  ["04", "VISUALIZE O PRÓXIMO NÍVEL", "Experimente novas possibilidades de criação e saia com prioridades definidas para continuar aplicando o conhecimento."],
 ];
 
 const faqs = [
@@ -199,7 +199,7 @@ function Index() {
 
       <section className="bg-surface-soft pb-[5.5rem] pt-7 min-[641px]:pb-[5.5rem] min-[641px]:pt-10 lg:pb-32">
         <div className="section-shell">
-          <div className="max-w-3xl"><p className="eyebrow">Programação</p><h2 className="section-title">Uma jornada direta do entendimento à implementação.</h2></div>
+          <div className="max-w-3xl"><p className="eyebrow">Programação</p><h2 className="section-title">Uma noite para sair do uso básico e começar a aplicar.</h2></div>
           <div className="mt-12 divide-y divide-border border-y border-border">
             {schedule.map(([number, title, text]) => (
               <article key={number} className="grid gap-4 py-7 sm:grid-cols-[70px_0.7fr_1.3fr] sm:items-start sm:gap-8">
