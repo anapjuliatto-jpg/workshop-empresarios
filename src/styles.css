@@ -90,6 +90,11 @@
   --offer-muted: oklch(0.8 0.025 52);
   --offer-card: oklch(0.98 0.016 55);
   --coral: oklch(0.65 0.12 46);
+  --guarantee: oklch(0.34164 0.04416 204.429);
+  --guarantee-foreground: oklch(0.98289 0.01095 63.364);
+  --guarantee-accent: oklch(0.57146 0.169 39.762);
+  --guarantee-detail: oklch(0.8565 0.06557 53.847);
+  --guarantee-card: oklch(1 0 0 / 0.08);
   --chart-1: oklch(0.646 0.222 41.116);
   --chart-2: oklch(0.6 0.118 184.704);
   --chart-3: oklch(0.398 0.07 227.392);
@@ -164,6 +169,11 @@
   --color-offer-muted: var(--offer-muted);
   --color-offer-card: var(--offer-card);
   --color-coral: var(--coral);
+  --color-guarantee: var(--guarantee);
+  --color-guarantee-foreground: var(--guarantee-foreground);
+  --color-guarantee-accent: var(--guarantee-accent);
+  --color-guarantee-detail: var(--guarantee-detail);
+  --color-guarantee-card: var(--guarantee-card);
 }
 
 @utility section-shell {
