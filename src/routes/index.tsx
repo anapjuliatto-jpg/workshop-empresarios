@@ -100,16 +100,16 @@ function Index() {
       </nav>
 
       <section id="inicio" className="relative border-b border-border/60">
-        <div className="mx-auto grid max-w-7xl lg:min-h-[760px] lg:grid-cols-[0.92fr_1.08fr]">
-          <div className="flex flex-col justify-center px-5 py-16 sm:px-10 lg:py-24">
-            <p className="mb-6 text-xs font-semibold uppercase tracking-[0.18em] text-primary">WORKSHOP ONLINE E AO VIVO</p>
-            <h1 className="max-w-2xl font-display text-5xl leading-[1.03] font-medium text-foreground sm:text-6xl lg:text-7xl">
+        <div className="mx-auto grid max-w-7xl lg:min-h-[calc(100svh-61px)] lg:grid-cols-[0.92fr_1.08fr]">
+          <div className="flex flex-col justify-center px-5 py-12 sm:px-10 sm:py-14 lg:py-8">
+            <p className="mb-4 text-xs font-semibold uppercase tracking-[0.18em] text-primary">WORKSHOP ONLINE E AO VIVO</p>
+            <h1 className="max-w-2xl text-balance font-display text-[40px] leading-[1.02] font-medium text-foreground sm:text-5xl lg:text-[60px]">
               Você sabe que precisa usar IA. Só não tem tempo para descobrir tudo sozinho.
             </h1>
-            <p className="mt-6 max-w-xl text-base leading-7 text-muted-foreground sm:text-lg">
+            <p className="mt-4 max-w-xl text-base leading-7 text-muted-foreground sm:text-lg">
               Em uma única noite, saia do uso básico e aprenda a aplicar Inteligência Artificial em tarefas reais do seu trabalho ou negócio — com orientação, prática e sem precisar saber programação.
             </p>
-            <div className="mt-8 grid gap-3 sm:grid-cols-2">
+            <div className="mt-6 grid grid-cols-2 gap-3">
               <div className="flex items-start gap-3 border-l-2 border-primary pl-4">
                 <CalendarDays className="mt-0.5 size-5 shrink-0 text-primary" />
                  <div><p className="text-xs font-semibold uppercase text-muted-foreground">DATA</p><p className="mt-1 text-sm font-semibold">8 de outubro de 2026</p></div>
@@ -119,7 +119,7 @@ function Index() {
                  <div><p className="text-xs font-semibold uppercase text-muted-foreground">HORÁRIO</p><p className="mt-1 text-sm font-semibold">Das 19h às 22h</p></div>
               </div>
             </div>
-            <div className="mt-9">
+            <div className="mt-7">
               <Cta />
               <p className="mt-3 max-w-xl text-xs leading-5 text-muted-foreground">Online e ao vivo • 3 horas de aplicação prática • Gravação disponível por 7 dias</p>
             </div>
