@@ -379,16 +379,24 @@ function Index() {
           <div className="mx-auto size-[165px] md:size-[225px]" aria-label="Compra segura, reembolso integral em 7 dias">
             <svg viewBox="0 0 240 240" className="size-full" role="img" aria-hidden="true">
               <defs>
-                <path id="guarantee-seal-path" d="M 120,120 m -91,0 a 91,91 0 1,1 182,0 a 91,91 0 1,1 -182,0" />
+                <path id="guarantee-seal-top" d="M 39,120 A 81,81 0 0,1 201,120" />
+                <path id="guarantee-seal-bottom" d="M 39,120 A 81,81 0 0,0 201,120" />
               </defs>
-              <circle cx="120" cy="120" r="112" fill="none" className="stroke-guarantee-accent" strokeWidth="2" />
-              <circle cx="120" cy="120" r="103" fill="none" className="stroke-guarantee-detail" strokeWidth="1" />
-              <circle cx="120" cy="120" r="91" fill="none" className="stroke-guarantee-accent" strokeWidth="1" />
-              <text className="fill-guarantee-detail text-[12px] font-semibold uppercase tracking-[0.17em]">
-                <textPath href="#guarantee-seal-path" startOffset="2%">COMPRA SEGURA • REEMBOLSO INTEGRAL</textPath>
+              <circle cx="120" cy="120" r="114" className="fill-guarantee stroke-guarantee-accent" strokeWidth="2.5" />
+              <circle cx="120" cy="120" r="107" fill="none" className="stroke-guarantee-detail" strokeWidth="1" />
+              <circle cx="120" cy="120" r="101" fill="none" className="stroke-guarantee-accent" strokeWidth="2" />
+              <circle cx="120" cy="120" r="70" fill="none" className="stroke-guarantee-detail" strokeWidth="1.5" />
+              <circle cx="120" cy="120" r="64" className="fill-guarantee-card stroke-guarantee-accent" strokeWidth="1" />
+              <text className="fill-guarantee-foreground text-[13px] font-semibold uppercase tracking-[0.15em]">
+                <textPath href="#guarantee-seal-top" startOffset="50%" textAnchor="middle">COMPRA SEGURA</textPath>
               </text>
-              <text x="120" y="131" textAnchor="middle" className="fill-guarantee-foreground font-display text-[92px] font-medium">7</text>
-              <text x="120" y="163" textAnchor="middle" className="fill-guarantee-detail text-[15px] font-semibold uppercase tracking-[0.24em]">DIAS</text>
+              <text className="fill-guarantee-foreground text-[11px] font-semibold uppercase tracking-[0.11em]">
+                <textPath href="#guarantee-seal-bottom" startOffset="50%" textAnchor="middle">REEMBOLSO INTEGRAL</textPath>
+              </text>
+              <circle cx="31" cy="120" r="3" className="fill-guarantee-detail" />
+              <circle cx="209" cy="120" r="3" className="fill-guarantee-detail" />
+              <text x="120" y="127" textAnchor="middle" className="fill-guarantee-foreground font-display text-[76px] font-medium">7</text>
+              <text x="120" y="151" textAnchor="middle" className="fill-guarantee-detail text-[12px] font-semibold uppercase tracking-[0.22em]">DIAS</text>
             </svg>
           </div>
 
