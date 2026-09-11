@@ -156,16 +156,37 @@ function Index() {
       </section>
 
       <section className="section-space">
-        <div className="section-shell grid gap-12 lg:grid-cols-[0.85fr_1.15fr] lg:items-center">
-          <div>
+        <div className="section-shell">
+          <div className="max-w-4xl">
             <p className="eyebrow">A transformação</p>
-            <h2 className="section-title">Você não precisa dominar todas as ferramentas. Precisa saber o que pedir e onde aplicar.</h2>
+            <h2 className="mt-3 font-display text-[32px] leading-[1.08] font-medium [hyphens:none] [word-break:normal] min-[641px]:text-5xl min-[641px]:leading-[1.12]">
+              Você não precisa aprender todas as ferramentas. Precisa aprender a fazer a IA trabalhar com você.
+            </h2>
+            <p className="mt-5 max-w-3xl text-base leading-[1.55] text-muted-foreground [hyphens:none] [word-break:normal] min-[641px]:mt-6 min-[641px]:text-lg min-[641px]:leading-8">
+              Durante o workshop, você partirá de uma necessidade real do seu trabalho ou negócio. Com orientação, aprenderá a fornecer contexto, delegar uma tarefa à Inteligência Artificial e transformar uma ideia em uma experiência prática.
+            </p>
           </div>
-          <div className="border-l border-border pl-6 sm:pl-10">
-            <p className="text-lg leading-8 text-muted-foreground">Neste workshop, a tecnologia sai do campo das possibilidades e entra na sua rotina. Você aprende a avaliar demandas, criar bons comandos e construir um uso consciente da IA para decisões, comunicação e operação.</p>
-            <div className="mt-8 flex flex-wrap gap-2">
-              {["Mais clareza", "Mais agilidade", "Aplicação consciente"].map((item) => <span key={item} className="rounded-full border border-primary/25 bg-accent px-4 py-2 text-sm font-medium text-accent-foreground">{item}</span>)}
-            </div>
+
+          <div className="mt-9 grid gap-[14px] min-[641px]:mt-12 lg:grid-cols-3 lg:auto-rows-fr">
+            {[
+              {
+                title: "A IA entende o seu contexto",
+                text: "Crie uma base com informações sobre você, sua atividade e seus objetivos para obter respostas mais úteis e personalizadas.",
+              },
+              {
+                title: "Uma tarefa real é executada",
+                text: "Use o ChatGPT para desenvolver uma entrega relacionada a uma necessidade verdadeira da sua rotina.",
+              },
+              {
+                title: "Uma ideia vira protótipo",
+                text: "Veja como transformar uma necessidade da sua área em uma solução interativa, mesmo sem saber programação.",
+              },
+            ].map(({ title, text }) => (
+              <article key={title} className="h-auto rounded-lg border border-border bg-card p-5 min-[641px]:p-[22px] lg:h-full">
+                <h3 className="font-display text-2xl leading-tight font-semibold [hyphens:none] [word-break:normal]">{title}</h3>
+                <p className="mt-3 text-base leading-[1.45] text-muted-foreground [hyphens:none] [word-break:normal] min-[641px]:text-[17px]">{text}</p>
+              </article>
+            ))}
           </div>
         </div>
       </section>
