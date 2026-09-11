@@ -1,4 +1,5 @@
 import { createFileRoute } from "@tanstack/react-router";
+import type { ReactNode } from "react";
 import {
   ArrowRight,
   CalendarDays,
@@ -11,7 +12,6 @@ import {
   ShieldCheck,
   Sparkles,
   Target,
-  Users,
 } from "lucide-react";
 
 import heroImage from "@/assets/workshop-hero.jpg";
@@ -83,7 +83,7 @@ function Cta({ label = "Quero participar do workshop" }: { label?: string }) {
   );
 }
 
-function Provisional({ children }: { children: React.ReactNode }) {
+function Provisional({ children }: { children: ReactNode }) {
   return <span className="inline-flex rounded-full bg-secondary px-3 py-1 text-xs font-semibold text-secondary-foreground">{children}</span>;
 }
 
