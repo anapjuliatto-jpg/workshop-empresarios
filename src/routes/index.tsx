@@ -205,9 +205,9 @@ function Index() {
         </div>
       </section>
 
-      <section className="pb-[5.5rem] pt-7 min-[641px]:pt-10 lg:pb-32">
+      <section className="pb-4 pt-7 min-[641px]:pb-[5.5rem] min-[641px]:pt-10 lg:pb-32">
         <div className="section-shell grid overflow-hidden rounded-lg border border-border bg-card lg:grid-cols-[0.72fr_1.28fr]">
-          <div className="relative aspect-[4/5] max-h-[470px] overflow-hidden lg:aspect-auto lg:max-h-none lg:min-h-[680px]">
+          <div className="relative h-[340px] w-full overflow-hidden min-[641px]:h-auto min-[641px]:aspect-[4/5] min-[641px]:max-h-[470px] lg:aspect-auto lg:max-h-none lg:min-h-[680px]">
             <img
               src={heroImage}
               alt="Ana Juliatto, consultora de Inteligência Comercial e IA para Negócios"
@@ -217,27 +217,30 @@ function Index() {
               className="absolute inset-0 h-full w-full object-cover object-[center_28%]"
             />
           </div>
-          <div className="flex flex-col justify-center p-6 min-[641px]:p-10 lg:p-14">
+          <div className="flex flex-col justify-center px-5 pb-4 pt-5 min-[641px]:p-10 lg:p-14">
             <p className="eyebrow">Sua especialista</p>
-            <h2 className="mt-3 font-display text-[32px] leading-[1.08] font-medium [hyphens:none] [word-break:normal] min-[641px]:text-5xl min-[641px]:leading-[1.12]">
+            <h2 className="mt-2 font-display text-[36px] leading-[1.07] font-medium [hyphens:none] [word-break:normal] min-[641px]:mt-3 min-[641px]:text-5xl min-[641px]:leading-[1.12]">
               Experiência de negócio para ensinar Inteligência Artificial com aplicação real.
             </h2>
-            <div className="mt-7 border-l-2 border-primary pl-4">
+            <div className="mt-5 border-l-2 border-primary pl-4 min-[641px]:mt-7">
               <h3 className="font-display text-2xl font-semibold [hyphens:none] [word-break:normal] min-[641px]:text-3xl">Ana Juliatto</h3>
               <p className="mt-1 text-sm font-semibold leading-6 text-primary [hyphens:none] [word-break:normal] min-[641px]:text-base">
                 Consultora de Inteligência Comercial e IA para Negócios
               </p>
             </div>
-            <div className="mt-6 space-y-4 text-base leading-[1.55] text-muted-foreground [hyphens:none] [word-break:normal]">
-              <p>Com 17 anos de experiência nas áreas comercial e de gestão, Ana Juliatto atuou em grandes empresas e vivenciou de perto os desafios de metas, processos, clientes, equipes e decisões.</p>
-              <p>Hoje, une essa experiência à Inteligência Artificial para ajudar empresários, empreendedores e profissionais a transformar possibilidades tecnológicas em aplicações úteis para o trabalho e para os negócios.</p>
+            <div className="mt-4 text-base leading-[1.55] text-muted-foreground [hyphens:none] [word-break:normal] min-[641px]:mt-6">
+              <p className="min-[641px]:hidden">Com 17 anos de experiência nas áreas comercial e de gestão, Ana Juliatto vivenciou em grandes empresas os desafios de metas, processos, clientes, equipes e decisões. Hoje, une essa experiência à Inteligência Artificial para transformar possibilidades tecnológicas em aplicações úteis para o trabalho e os negócios.</p>
+              <div className="hidden space-y-4 min-[641px]:block">
+                <p>Com 17 anos de experiência nas áreas comercial e de gestão, Ana Juliatto atuou em grandes empresas e vivenciou de perto os desafios de metas, processos, clientes, equipes e decisões.</p>
+                <p>Hoje, une essa experiência à Inteligência Artificial para ajudar empresários, empreendedores e profissionais a transformar possibilidades tecnológicas em aplicações úteis para o trabalho e para os negócios.</p>
+              </div>
             </div>
-            <blockquote className="mt-6 border-y border-border py-4 font-display text-xl leading-snug text-foreground [hyphens:none] [word-break:normal] min-[641px]:text-2xl">
+            <blockquote className="mt-4 border-y border-border py-3 font-display text-xl leading-snug text-foreground [hyphens:none] [word-break:normal] min-[641px]:mt-6 min-[641px]:py-4 min-[641px]:text-2xl">
               “A Inteligência Artificial só gera valor quando melhora algo real.”
             </blockquote>
-            <ul className="mt-6 grid gap-2 min-[641px]:grid-cols-3">
+            <ul className="mt-4 grid gap-1.5 min-[641px]:mt-6 min-[641px]:grid-cols-3 min-[641px]:gap-2">
               {["17 anos de experiência empresarial", "Inteligência Comercial + IA", "Workshops, treinamentos e consultorias"].map((indicator) => (
-                <li key={indicator} className="flex min-h-12 items-center border-l-2 border-primary bg-secondary/60 px-3 py-2 text-sm font-semibold leading-5 [hyphens:none] [word-break:normal]">
+                <li key={indicator} className="flex min-h-11 items-center border-l-2 border-primary bg-secondary/60 px-3 py-1.5 text-sm font-semibold leading-5 [hyphens:none] [word-break:normal] min-[641px]:min-h-12 min-[641px]:py-2">
                   {indicator}
                 </li>
               ))}
