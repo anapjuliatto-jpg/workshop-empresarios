@@ -385,7 +385,7 @@ function Index() {
               <circle cx="120" cy="120" r="103" fill="none" className="stroke-guarantee-detail" strokeWidth="1" />
               <circle cx="120" cy="120" r="91" fill="none" className="stroke-guarantee-accent" strokeWidth="1" />
               <text className="fill-guarantee-detail text-[12px] font-semibold uppercase tracking-[0.17em]">
-                <textPath href="#guarantee-seal-path" startOffset="2%">COMPRA SEGURA • REEMBOLSO INTEGRAL</textPath>
+                <textPath href="#guarantee-seal-path" startOffset="2%">COMPRA SEGURA • REEMBOLSO INTEGRAL</textPath>
               </text>
               <text x="120" y="131" textAnchor="middle" className="fill-guarantee-foreground font-display text-[92px] font-medium">7</text>
               <text x="120" y="163" textAnchor="middle" className="fill-guarantee-detail text-[15px] font-semibold uppercase tracking-[0.24em]">DIAS</text>
