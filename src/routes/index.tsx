@@ -6,12 +6,9 @@ import {
   Check,
   CheckCircle2,
   Clock3,
-  Lightbulb,
-  ListChecks,
   MonitorPlay,
   ShieldCheck,
   Sparkles,
-  Target,
 } from "lucide-react";
 
 import heroImageAsset from "@/assets/especialista-workshop.png.asset.json";
@@ -49,12 +46,6 @@ const painPoints = [
   "Toda semana surge uma nova ferramenta, e você não tem tempo para descobrir qual realmente vale a pena.",
   "As respostas parecem genéricas, e você acaba revisando ou refazendo grande parte do trabalho.",
   "Você sabe que poderia ganhar tempo, mas ainda não sabe o que delegar à IA e o que precisa continuar sob sua decisão.",
-];
-
-const experiences = [
-  { icon: Target, title: "Diagnóstico de rotina", text: "Identifique onde a IA pode liberar tempo e reduzir tarefas repetitivas." },
-  { icon: Lightbulb, title: "Comandos que funcionam", text: "Estruture pedidos mais claros para obter respostas úteis e aplicáveis." },
-  { icon: ListChecks, title: "Plano de aplicação", text: "Saia com prioridades definidas para levar o aprendizado à prática." },
 ];
 
 const schedule = [
@@ -191,16 +182,37 @@ function Index() {
         </div>
       </section>
 
-      <section className="section-space bg-secondary">
+      <section className="bg-secondary py-[52px] min-[641px]:py-[5.5rem] lg:py-24">
         <div className="section-shell">
           <p className="eyebrow">Experiências práticas</p>
-          <h2 className="section-title max-w-3xl">Aprendizado pensado para virar ação ainda durante o encontro.</h2>
-          <div className="mt-12 grid gap-5 lg:grid-cols-3">
-            {experiences.map(({ icon: Icon, title, text }) => (
-              <article key={title} className="rounded-lg border border-border bg-card p-7">
-                <div className="mb-8 grid size-12 place-items-center rounded-full bg-accent text-primary"><Icon /></div>
-                <h3 className="font-display text-2xl font-semibold">{title}</h3>
-                <p className="mt-3 leading-7 text-muted-foreground">{text}</p>
+          <h2 className="mt-3 max-w-4xl font-display text-[32px] leading-[1.08] font-medium [hyphens:none] [word-break:normal] min-[641px]:text-5xl min-[641px]:leading-[1.12]">
+            Você não vai apenas assistir. Vai construir, testar e ver a transformação acontecer.
+          </h2>
+          <p className="mt-5 max-w-3xl text-base leading-[1.45] text-muted-foreground [hyphens:none] [word-break:normal] min-[641px]:mt-6 min-[641px]:text-lg min-[641px]:leading-8">
+            Com o apoio do portal do workshop, você seguirá cada etapa com orientações e comandos preparados para aplicar no seu próprio contexto.
+          </p>
+          <div className="mt-8 grid gap-[14px] min-[641px]:mt-12 lg:auto-rows-fr lg:grid-cols-3">
+            {[
+              {
+                number: "01",
+                title: "Seu documento mestre",
+                text: "Crie uma base estruturada com informações sobre você, sua atuação e seus objetivos para ajudar a IA a compreender melhor o seu contexto.",
+              },
+              {
+                number: "02",
+                title: "Uma tarefa executada no ChatGPT",
+                text: "Escolha uma necessidade real da sua rotina e utilize a IA para desenvolver uma entrega prática, de acordo com a sua área de atuação.",
+              },
+              {
+                number: "03",
+                title: "Seu protótipo interativo",
+                text: "Transforme uma ideia ou necessidade da sua área em um protótipo no Claude e descubra como a IA pode ajudar a criar soluções sem programação.",
+              },
+            ].map(({ number, title, text }) => (
+              <article key={number} className="h-auto rounded-lg border border-border bg-card p-5 min-[641px]:p-[22px] lg:h-full">
+                <span className="font-display text-3xl font-semibold text-primary">{number}</span>
+                <h3 className="mt-5 font-display text-2xl leading-tight font-semibold [hyphens:none] [word-break:normal]">{title}</h3>
+                <p className="mt-3 text-base leading-[1.45] text-muted-foreground [hyphens:none] [word-break:normal] min-[641px]:text-[17px]">{text}</p>
               </article>
             ))}
           </div>
