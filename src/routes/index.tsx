@@ -103,7 +103,7 @@ function Index() {
         <div className="mx-auto grid max-w-7xl lg:min-h-[calc(100svh-61px)] lg:grid-cols-[0.92fr_1.08fr]">
           <div className="flex flex-col justify-center px-5 py-12 sm:px-10 sm:py-14 lg:py-8">
             <p className="mb-4 text-xs font-semibold uppercase tracking-[0.18em] text-primary">WORKSHOP ONLINE E AO VIVO</p>
-            <h1 className="max-w-2xl text-balance font-display text-[40px] leading-[1.02] font-medium text-foreground sm:text-5xl lg:text-[60px]">
+            <h1 className="max-w-2xl text-balance font-display text-[40px] leading-[1.02] font-medium text-foreground sm:text-5xl lg:text-[54px] lg:leading-none">
               Você sabe que precisa usar IA. Só não tem tempo para descobrir tudo sozinho.
             </h1>
             <p className="mt-4 max-w-xl text-base leading-7 text-muted-foreground sm:text-lg">
