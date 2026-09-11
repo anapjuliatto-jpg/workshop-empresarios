@@ -135,7 +135,7 @@ function Index() {
         </div>
       </section>
 
-       <section className="bg-surface-soft py-12 min-[641px]:py-[5.5rem] lg:py-32">
+       <section className="bg-surface-soft pb-6 pt-12 min-[641px]:pb-10 min-[641px]:pt-[5.5rem] lg:pb-10 lg:pt-32">
         <div className="section-shell">
           <div className="mx-auto max-w-3xl text-center">
             <p className="eyebrow">Isso parece familiar?</p>
@@ -155,7 +155,7 @@ function Index() {
         </div>
       </section>
 
-      <section className="section-space">
+      <section className="pb-[5.5rem] pt-7 min-[641px]:pb-[5.5rem] min-[641px]:pt-10 lg:pb-32 lg:pt-10">
         <div className="section-shell">
           <div className="max-w-4xl">
             <p className="eyebrow">A transformação</p>
