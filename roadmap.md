@@ -7,3 +7,5 @@
 - [x] Validar em 375px, 390px, 768px, 1366px e 1440px.
 - [x] Substituir exclusivamente a paleta global pelas oito cores fornecidas.
 - [x] Validar que estrutura, conteúdo e responsividade permanecem intactos.
+- [ ] Restaurar a paleta original creme, pêssego, terracota e marrom.
+- [ ] Remover apenas o sobretítulo da primeira dobra e validar a página.
