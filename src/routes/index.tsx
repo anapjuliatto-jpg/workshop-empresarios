@@ -418,7 +418,7 @@ function Index() {
           <Sparkles className="mx-auto size-7" />
           <h2 className="mx-auto mt-5 max-w-3xl font-display text-4xl leading-tight font-medium sm:text-5xl">Comece a usar a IA com intenção, método e autonomia.</h2>
           <p className="mx-auto mt-5 max-w-xl text-sm leading-6 text-primary-foreground/80">Inscrições e informações completas em breve.</p>
-          <div className="mt-8"><Button asChild size="lg" variant="secondary" className="h-14 w-full rounded-full px-7 sm:w-auto"><a href="#inscricao">Quero receber as informações <ArrowRight /></a></Button></div>
+          <div className="mt-8"><Button asChild size="lg" variant="secondary" className="h-14 w-full rounded-full bg-primary px-7 text-primary-foreground hover:bg-primary/90 sm:w-auto"><a href="#inscricao">Quero receber as informações <ArrowRight /></a></Button></div>
         </div>
       </section>
 
