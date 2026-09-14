@@ -117,7 +117,7 @@ function Index() {
 
   return (
     <main className="overflow-hidden">
-      <nav aria-label="Navegação principal" className="sticky top-0 z-50 border-b border-offer-foreground/15 bg-offer text-offer-foreground">
+      <nav aria-label="Navegação principal" className="sticky top-0 z-50 border-b border-border bg-background text-heading">
         <div className="mx-auto grid max-w-7xl grid-cols-[minmax(0,1fr)_auto] items-center gap-2 px-5 py-3 min-[641px]:gap-4 min-[641px]:py-4 lg:px-10">
           <a href="#inicio" className="min-w-0 whitespace-nowrap font-display text-base font-semibold leading-none min-[641px]:text-xl">IA para Empresários</a>
           <Button asChild size="sm" className="h-8 shrink-0 rounded-full px-3 text-xs min-[641px]:h-9 min-[641px]:px-4 min-[641px]:text-sm">
@@ -126,36 +126,35 @@ function Index() {
         </div>
       </nav>
 
-      <section id="inicio" className="relative bg-offer text-offer-foreground">
+      <section id="inicio" className="relative bg-background text-foreground">
         <div className="mx-auto grid max-w-7xl lg:grid-cols-[0.95fr_1.05fr] lg:items-stretch">
           <div className="flex flex-col justify-center px-5 py-10 min-[641px]:px-10 min-[641px]:py-16 lg:px-14 lg:py-20">
-            <p className="mb-3 text-xs font-semibold uppercase tracking-[0.18em] text-primary min-[641px]:mb-4">WORKSHOP ONLINE E AO VIVO</p>
             <h1 className="max-w-2xl text-balance font-display text-[38px] leading-[1.06] font-medium min-[641px]:text-5xl lg:text-[58px] lg:leading-[1.03]">
               Você sabe que precisa usar IA. Só não tem tempo para descobrir tudo sozinho.
             </h1>
-            <p className="mt-5 max-w-xl text-base leading-[1.65] text-offer-muted min-[641px]:text-lg min-[641px]:leading-8">
+            <p className="mt-5 max-w-xl text-base leading-[1.65] text-muted-foreground min-[641px]:text-lg min-[641px]:leading-8">
               Em uma única noite, saia do uso básico e aprenda a aplicar Inteligência Artificial em tarefas reais do seu trabalho ou negócio — com orientação, prática e sem precisar saber programação.
             </p>
             <div className="mt-4 grid grid-cols-1 gap-3 min-[360px]:grid-cols-2 min-[360px]:gap-2 min-[641px]:mt-6 min-[641px]:gap-3">
               <div className="flex min-w-0 items-start gap-2 border-l-2 border-guarantee-detail pl-3 min-[641px]:gap-3 min-[641px]:pl-4">
                 <CalendarDays className="mt-0.5 size-4 shrink-0 text-primary min-[641px]:size-5" />
-                  <div className="min-w-0"><p className="text-[11px] font-semibold uppercase text-offer-muted min-[641px]:text-xs">DATA</p><p className="mt-0.5 text-sm font-semibold min-[641px]:mt-1"><span className="min-[641px]:hidden">8 de outubro<br />de 2026</span><span className="hidden min-[641px]:inline">8 de outubro de 2026</span></p></div>
+                   <div className="min-w-0"><p className="text-[11px] font-semibold uppercase text-muted-foreground min-[641px]:text-xs">DATA</p><p className="mt-0.5 text-sm font-semibold min-[641px]:mt-1"><span className="min-[641px]:hidden">8 de outubro<br />de 2026</span><span className="hidden min-[641px]:inline">8 de outubro de 2026</span></p></div>
               </div>
                <div className="flex min-w-0 items-start gap-2 border-l-2 border-guarantee-detail pl-3 min-[641px]:gap-3 min-[641px]:pl-4">
                 <Clock3 className="mt-0.5 size-4 shrink-0 text-primary min-[641px]:size-5" />
-                  <div className="min-w-0"><p className="text-[11px] font-semibold uppercase text-offer-muted min-[641px]:text-xs">HORÁRIO</p><p className="mt-0.5 text-sm font-semibold min-[641px]:mt-1">Das 19h às 22h</p></div>
+                   <div className="min-w-0"><p className="text-[11px] font-semibold uppercase text-muted-foreground min-[641px]:text-xs">HORÁRIO</p><p className="mt-0.5 text-sm font-semibold min-[641px]:mt-1">Das 19h às 22h</p></div>
               </div>
             </div>
             <div className="mt-5 min-[641px]:mt-7">
               <Cta compactMobile />
-               <p className="mx-auto mt-3 max-w-[350px] text-center text-xs leading-5 text-offer-muted min-[641px]:mx-0 min-[641px]:max-w-xl min-[641px]:text-left">Online e ao vivo • 3 horas de aplicação prática • Gravação disponível por 7 dias</p>
+                <p className="mx-auto mt-3 max-w-[350px] text-center text-xs leading-5 text-muted-foreground min-[641px]:mx-0 min-[641px]:max-w-xl min-[641px]:text-left">Online e ao vivo • 3 horas de aplicação prática • Gravação disponível por 7 dias</p>
             </div>
           </div>
-          <div className="flex flex-col border-t border-offer-foreground/15 min-[641px]:border-t-0 lg:border-l">
+          <div className="flex flex-col border-t border-border min-[641px]:border-t-0 lg:border-l">
             <div className="relative aspect-[4/5] min-h-0 flex-1 overflow-hidden lg:aspect-auto lg:min-h-[690px]">
              <img src={heroImage} alt="Ana Juliatto em seu ambiente de trabalho" width={768} height={1024} className="absolute inset-0 h-full w-full object-cover object-[center_30%]" />
             </div>
-            <p className="border-t border-offer-foreground/15 bg-offer px-6 py-5 font-display text-xl leading-snug text-offer-foreground lg:px-10 lg:text-2xl">Menos perguntas soltas. Mais tarefas executadas com Inteligência Artificial.</p>
+            <p className="border-t border-border bg-secondary px-6 py-5 font-display text-xl leading-snug text-heading lg:px-10 lg:text-2xl">Menos perguntas soltas. Mais tarefas executadas com Inteligência Artificial.</p>
           </div>
         </div>
       </section>
