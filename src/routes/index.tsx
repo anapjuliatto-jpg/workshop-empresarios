@@ -53,10 +53,10 @@ const painPoints = [
 ];
 
 const schedule = [
-  ["01", "IDENTIFIQUE ONDE A IA FAZ SENTIDO", "Reconheça tarefas, gargalos e oportunidades em que a Inteligência Artificial pode gerar ganho real de tempo e produtividade."],
-  ["02", "APRENDA A ORIENTAR A IA", "Organize as informações e o contexto necessários para receber respostas mais úteis, personalizadas e aplicáveis."],
-  ["03", "TRANSFORME UMA NECESSIDADE EM ENTREGA", "Trabalhe uma situação verdadeira da sua rotina e acompanhe a construção de um resultado prático durante o encontro."],
-  ["04", "VISUALIZE O PRÓXIMO NÍVEL", "Experimente novas possibilidades de criação e saia com prioridades definidas para continuar aplicando o conhecimento."],
+  ["01", "ESCOLHA UMA NECESSIDADE REAL", "Reconheça tarefas, gargalos e oportunidades em que a Inteligência Artificial pode gerar ganho real de tempo e produtividade."],
+  ["02", "ORGANIZE O CONTEXTO PARA A IA", "Organize as informações e o contexto necessários para receber respostas mais úteis, personalizadas e aplicáveis."],
+  ["03", "CONSTRUA UMA ENTREGA PRÁTICA", "Trabalhe uma situação verdadeira da sua rotina e acompanhe a construção de um resultado prático durante o encontro."],
+  ["04", "DEFINA O PRÓXIMO PASSO", "Experimente novas possibilidades de criação e saia com prioridades definidas para continuar aplicando o conhecimento."],
 ];
 
 const faqs = [
@@ -130,10 +130,10 @@ function Index() {
         <div className="mx-auto grid max-w-7xl lg:grid-cols-[0.95fr_1.05fr] lg:items-stretch">
           <div className="flex flex-col justify-center px-5 py-10 min-[641px]:px-10 min-[641px]:py-16 lg:px-14 lg:py-20">
             <h1 className="max-w-2xl text-balance font-display text-[38px] leading-[1.06] font-medium min-[641px]:text-5xl lg:text-[58px] lg:leading-[1.03]">
-              Você sabe que precisa usar IA. Só não tem tempo para descobrir tudo sozinho.
+              Construa uma aplicação real de IA para o seu negócio em uma única noite.
             </h1>
             <p className="mt-5 max-w-xl text-base leading-[1.65] text-muted-foreground min-[641px]:text-lg min-[641px]:leading-8">
-              Em uma única noite, saia do uso básico e aprenda a aplicar Inteligência Artificial em tarefas reais do seu trabalho ou negócio — com orientação, prática e sem precisar saber programação.
+              Traga uma necessidade do seu trabalho e transforme-a em uma entrega prática com Inteligência Artificial. Em três horas, você organiza o contexto, executa uma tarefa e visualiza o próximo passo — com orientação e sem precisar programar.
             </p>
             <div className="mt-4 grid grid-cols-1 gap-3 min-[360px]:grid-cols-2 min-[360px]:gap-2 min-[641px]:mt-6 min-[641px]:gap-3">
               <div className="flex min-w-0 items-start gap-2 border-l-2 border-guarantee-detail pl-3 min-[641px]:gap-3 min-[641px]:pl-4">
@@ -159,7 +159,28 @@ function Index() {
         </div>
       </section>
 
-       <section className="bg-surface-soft py-16 min-[641px]:py-24 lg:py-28">
+       <section className="bg-secondary py-14 min-[641px]:py-20">
+        <div className="section-shell grid gap-8 lg:grid-cols-[0.8fr_1.2fr] lg:items-center">
+          <div>
+            <p className="eyebrow">A oportunidade</p>
+            <h2 className="section-title">O valor da IA aparece quando uma tarefa real sai do papel.</h2>
+          </div>
+          <div className="grid gap-px overflow-hidden border border-border bg-border sm:grid-cols-3">
+            {[
+              ["Contexto", "Organize as informações do seu negócio para orientar a IA."],
+              ["Execução", "Use a IA em uma necessidade concreta da sua rotina."],
+              ["Continuidade", "Defina onde aplicar o resultado depois do encontro."],
+            ].map(([title, text]) => (
+              <article key={title} className="bg-card p-6">
+                <h3 className="font-display text-2xl font-semibold text-heading">{title}</h3>
+                <p className="mt-3 text-sm leading-6 text-muted-foreground">{text}</p>
+              </article>
+            ))}
+          </div>
+        </div>
+      </section>
+
+      <section className="bg-surface-soft py-16 min-[641px]:py-24 lg:py-28">
         <div className="section-shell">
           <div className="mx-auto max-w-3xl text-center">
             <p className="eyebrow">Isso parece familiar?</p>
@@ -187,7 +208,7 @@ function Index() {
               Você não precisa aprender todas as ferramentas. Precisa aprender a fazer a IA trabalhar com você.
             </h2>
              <p className="mt-5 max-w-3xl text-base leading-[1.65] text-offer-muted [hyphens:none] [word-break:normal] min-[641px]:mt-6 min-[641px]:text-lg min-[641px]:leading-8">
-              Durante o workshop, você partirá de uma necessidade real do seu trabalho ou negócio. Com orientação, aprenderá a fornecer contexto, delegar uma tarefa à Inteligência Artificial e transformar uma ideia em uma experiência prática.
+              Durante o workshop, você partirá de uma necessidade real do seu trabalho ou negócio. Com orientação, organizará o contexto, executará uma tarefa com Inteligência Artificial e transformará uma ideia em uma experiência prática.
             </p>
           </div>
 
@@ -215,6 +236,19 @@ function Index() {
         </div>
       </section>
 
+      <section className="bg-surface-soft py-16 min-[641px]:py-24">
+        <div className="section-shell">
+          <div className="max-w-3xl"><p className="eyebrow">Programação</p><h2 className="section-title">Quatro etapas para construir uma entrega prática em uma noite.</h2></div>
+          <div className="relative mt-12 border-l border-primary/40 pl-6 min-[641px]:ml-5 min-[641px]:pl-12">
+            {schedule.map(([number, title, text]) => (
+               <article key={number} className="relative grid gap-3 border-b border-border py-7 min-[641px]:grid-cols-[minmax(0,0.8fr)_minmax(0,1.2fr)] min-[641px]:gap-10">
+                 <span className="absolute -left-[45px] top-7 grid size-10 place-items-center rounded-full bg-primary font-display text-base text-primary-foreground min-[641px]:-left-[69px]">{number}</span><h3 className="font-display text-xl font-semibold min-[641px]:text-2xl">{title}</h3><p className="text-base leading-7 text-muted-foreground">{text}</p>
+              </article>
+            ))}
+          </div>
+        </div>
+      </section>
+
       <section className="py-16 min-[641px]:py-24">
         <div className="section-shell grid gap-12 lg:grid-cols-2 lg:items-start">
           <div className="lg:sticky lg:top-28">
@@ -227,19 +261,6 @@ function Index() {
                <li key={item} className="flex gap-4 bg-card p-6"><CheckCircle2 className="mt-0.5 size-5 shrink-0 text-primary" /><span className="text-base leading-7">{item}</span></li>
             ))}
           </ul>
-        </div>
-      </section>
-
-      <section className="bg-surface-soft py-16 min-[641px]:py-24">
-        <div className="section-shell">
-          <div className="max-w-3xl"><p className="eyebrow">Programação</p><h2 className="section-title">Uma noite para sair do uso básico e começar a aplicar.</h2></div>
-          <div className="relative mt-12 border-l border-primary/40 pl-6 min-[641px]:ml-5 min-[641px]:pl-12">
-            {schedule.map(([number, title, text]) => (
-               <article key={number} className="relative grid gap-3 border-b border-border py-7 min-[641px]:grid-cols-[minmax(0,0.8fr)_minmax(0,1.2fr)] min-[641px]:gap-10">
-                 <span className="absolute -left-[45px] top-7 grid size-10 place-items-center rounded-full bg-primary font-display text-base text-primary-foreground min-[641px]:-left-[69px]">{number}</span><h3 className="font-display text-xl font-semibold min-[641px]:text-2xl">{title}</h3><p className="text-base leading-7 text-muted-foreground">{text}</p>
-              </article>
-            ))}
-          </div>
         </div>
       </section>
 
@@ -375,24 +396,26 @@ function Index() {
         </div>
       </section>
 
-      <section className="bg-guarantee px-5 py-14 text-guarantee-foreground sm:px-10 sm:py-18">
-        <div className="mx-auto grid max-w-5xl items-center gap-8 md:grid-cols-[240px_1fr] md:gap-14 lg:gap-20">
-          <div className="mx-auto size-[178px] md:size-[215px]" aria-label="Compra segura, reembolso integral em 7 dias">
-            <div className="grid size-full place-items-center bg-guarantee-detail p-2 [clip-path:polygon(50%_0%,57%_4%,65%_1%,71%_7%,79%_5%,84%_12%,92%_12%,95%_20%,100%_25%,97%_34%,100%_42%,96%_50%,100%_58%,97%_66%,100%_75%,95%_80%,92%_88%,84%_88%,79%_95%,71%_93%,65%_99%,57%_96%,50%_100%,43%_96%,35%_99%,29%_93%,21%_95%,16%_88%,8%_88%,5%_80%,0%_75%,3%_66%,0%_58%,4%_50%,0%_42%,3%_34%,0%_25%,5%_20%,8%_12%,16%_12%,21%_5%,29%_7%,35%_1%,43%_4%)]">
-              <div className="relative grid size-full place-items-center rounded-full border-4 border-guarantee-accent bg-guarantee text-center shadow-inner">
-                <div><div className="mb-1 text-[10px] font-semibold uppercase tracking-[0.16em] text-guarantee-detail">★ ★ ★</div><div className="font-display text-5xl font-semibold leading-none">7 <span className="text-xl">DIAS</span></div><div className="absolute inset-x-[-8px] top-[58%] bg-guarantee-accent py-1 text-[11px] font-bold uppercase tracking-[0.14em] text-guarantee-foreground">Garantia</div><div className="mt-7 text-[8px] font-semibold uppercase tracking-[0.12em] text-guarantee-detail">Reembolso integral</div></div>
-              </div>
+      <section className="relative overflow-hidden bg-secondary px-5 py-16 text-foreground sm:px-10 sm:py-20">
+        <span aria-hidden="true" className="pointer-events-none absolute -left-8 top-0 font-display text-[20rem] leading-none text-primary/5 sm:text-[28rem]">7</span>
+        <div className="relative mx-auto grid max-w-5xl items-center gap-10 md:grid-cols-[260px_1fr] md:gap-14">
+          <div className="mx-auto grid size-56 place-items-center rounded-full border-[3px] border-primary bg-gradient-to-br from-accent via-secondary to-primary p-2 shadow-xl md:size-64" aria-label="Selo: 7 dias de garantia">
+            <div className="relative grid size-full place-items-center rounded-full border-[6px] border-accent bg-offer text-offer-foreground shadow-inner">
+              <svg aria-hidden="true" className="absolute inset-0 size-full fill-accent" viewBox="0 0 220 220">
+                <defs><path id="garantia-arco" d="M 110,110 m -83,0 a 83,83 0 1,1 166,0 a 83,83 0 1,1 -166,0" /></defs>
+                <text className="font-sans text-[13px] font-semibold uppercase tracking-[0.12em]"><textPath href="#garantia-arco" startOffset="50%" textAnchor="middle">7 DIAS DE GARANTIA • 7 DIAS DE GARANTIA •</textPath></text>
+              </svg>
+              <strong className="font-display text-8xl leading-none text-offer-foreground">7</strong>
             </div>
           </div>
-
           <div className="text-center md:text-left">
-            <p className="text-xs font-semibold uppercase tracking-[0.18em] text-guarantee-detail">Compra segura</p>
-            <h2 className="mt-3 max-w-3xl font-display text-[34px] leading-[1.08] font-medium md:text-5xl">Você tem 7 dias para decidir com tranquilidade.</h2>
+            <p className="eyebrow">Compra segura</p>
+            <h2 className="mt-3 max-w-3xl font-display text-[34px] leading-[1.08] font-medium text-heading md:text-5xl">7 dias de garantia para decidir com tranquilidade.</h2>
             <p className="mt-5 max-w-2xl text-base leading-7">Se mudar de ideia, você poderá solicitar o cancelamento e o reembolso integral em até 7 dias corridos após a confirmação da compra.</p>
-            <p className="mt-3 max-w-2xl text-sm leading-6 text-guarantee-detail">A solicitação não exige justificativa e seguirá as condições previstas para compras realizadas online.</p>
+            <p className="mt-3 max-w-2xl text-sm leading-6 text-muted-foreground">A solicitação não exige justificativa e seguirá as condições previstas para compras realizadas online.</p>
             <div className="mt-7 grid gap-3 min-[380px]:grid-cols-2">
-              <div className="flex min-h-14 items-center justify-center border border-guarantee-accent/70 bg-guarantee-card px-4 py-3 text-center text-sm font-semibold">7 dias corridos após a compra</div>
-              <div className="flex min-h-14 items-center justify-center border border-guarantee-accent/70 bg-guarantee-card px-4 py-3 text-center text-sm font-semibold">Reembolso integral</div>
+              <div className="flex min-h-14 items-center justify-center border border-primary/30 bg-card px-4 py-3 text-center text-sm font-semibold">7 dias corridos após a compra</div>
+              <div className="flex min-h-14 items-center justify-center border border-primary/30 bg-card px-4 py-3 text-center text-sm font-semibold">Reembolso integral</div>
             </div>
           </div>
         </div>
