@@ -45,6 +45,16 @@ export const Route = createFileRoute("/")({
   component: Index,
 });
 
+// 🔗 LINK DE CHECKOUT (pagamento)
+// Cole aqui o link da Hotmart/Eduzz. Enquanto estiver "#inscricao",
+// os botões apenas rolam até a seção de inscrição na própria página.
+// Ex.: const CHECKOUT_URL = "https://pay.hotmart.com/XXXXXXX";
+const CHECKOUT_URL = "#inscricao";
+const isExternalCheckout = !CHECKOUT_URL.startsWith("#");
+const checkoutLinkProps = isExternalCheckout
+  ? { href: CHECKOUT_URL, target: "_blank", rel: "noopener noreferrer" }
+  : { href: CHECKOUT_URL };
+
 const painPoints = [
   "Você já usa IA para fazer perguntas, textos ou imagens — mas, na prática, sua rotina continua praticamente igual.",
   "Toda semana surge uma nova ferramenta, e você não tem tempo para descobrir qual realmente vale a pena.",
@@ -61,10 +71,10 @@ const schedule = [
 
 const faqs = [
   ["Preciso saber usar Inteligência Artificial?", "Não. O conteúdo foi pensado para partir do essencial e avançar para aplicações práticas, com linguagem acessível."],
-  ["O workshop será ao vivo?", "Sim. O encontro será online e ao vivo. A plataforma de transmissão ainda será informada."],
-  ["Qual é a data e o horário?", "Informação provisória — data e horário a definir."],
-  ["Haverá gravação?", "Informação provisória — disponibilidade e prazo de acesso à gravação a definir."],
-  ["Como receberei o acesso?", "Informação provisória — os detalhes de acesso serão definidos antes da abertura das inscrições."],
+  ["O workshop será ao vivo?", "Sim. É um encontro online e ao vivo, com três horas de aplicação prática — você acompanha, pergunta e coloca a mão na massa junto."],
+  ["Qual é a data e o horário?", "No dia 8 de outubro de 2026, das 19h às 22h (horário de Brasília), online e ao vivo."],
+  ["Haverá gravação?", "Sim. A gravação fica disponível por 7 dias após o encontro, para você rever as demonstrações com calma."],
+  ["Como receberei o acesso?", "Assim que a inscrição for confirmada, você recebe por e-mail o link de acesso ao encontro e ao portal do workshop. Perto da data, enviamos um lembrete."],
 ];
 
 const includedBenefits = [
@@ -103,7 +113,7 @@ const includedBenefits = [
 function Cta({ label = "QUERO GARANTIR MINHA VAGA", compactMobile = false }: { label?: string; compactMobile?: boolean }) {
   return (
     <Button asChild size="lg" className={`${compactMobile ? "h-12 text-xs sm:h-14 sm:text-sm" : "h-14 text-sm"} w-full rounded-full px-6 font-semibold sm:w-auto`}>
-      <a href="#inscricao">
+      <a {...checkoutLinkProps}>
         {label}
         <ArrowRight aria-hidden="true" />
       </a>
@@ -121,7 +131,7 @@ function Index() {
         <div className="mx-auto grid max-w-7xl grid-cols-[minmax(0,1fr)_auto] items-center gap-2 px-5 py-3 min-[641px]:gap-4 min-[641px]:py-4 lg:px-10">
           <a href="#inicio" className="min-w-0 whitespace-nowrap font-display text-base font-semibold leading-none min-[641px]:text-xl">IA para Empresários</a>
           <Button asChild size="sm" className="h-8 shrink-0 rounded-full px-3 text-xs min-[641px]:h-9 min-[641px]:px-4 min-[641px]:text-sm">
-            <a href="#inscricao">Inscrever-me</a>
+            <a {...checkoutLinkProps}>Inscrever-me</a>
           </Button>
         </div>
       </nav>
@@ -387,7 +397,7 @@ function Index() {
               <p className="mt-6 text-sm leading-6 text-muted-foreground">Sua inscrição inclui o encontro ao vivo, os exercícios guiados, o acesso ao portal durante o workshop e a gravação por sete dias.</p>
               <div className="mt-7">
                 <Button asChild size="lg" className="h-14 w-full rounded-full px-6 text-sm font-semibold">
-                  <a href="#inscricao">QUERO GARANTIR MINHA VAGA <ArrowRight aria-hidden="true" /></a>
+                  <a {...checkoutLinkProps}>QUERO GARANTIR MINHA VAGA <ArrowRight aria-hidden="true" /></a>
                 </Button>
               </div>
               <p className="mt-4 text-center text-xs leading-5 text-muted-foreground">Inscrição individual para o workshop online e ao vivo.</p>
@@ -439,13 +449,13 @@ function Index() {
          <div className="mx-auto max-w-5xl border-y border-primary bg-offer px-6 py-12 text-center text-offer-foreground sm:px-12 sm:py-16">
           <Sparkles className="mx-auto size-7" />
           <h2 className="mx-auto mt-5 max-w-3xl font-display text-4xl leading-tight font-medium sm:text-5xl">Comece a usar a IA com intenção, método e autonomia.</h2>
-          <p className="mx-auto mt-5 max-w-xl text-sm leading-6 text-primary-foreground/80">Inscrições e informações completas em breve.</p>
-          <div className="mt-8"><Button asChild size="lg" variant="secondary" className="h-14 w-full rounded-full bg-primary px-7 text-primary-foreground hover:bg-primary/90 sm:w-auto"><a href="#inscricao">Quero receber as informações <ArrowRight /></a></Button></div>
+          <p className="mx-auto mt-5 max-w-xl text-sm leading-6 text-primary-foreground/80">As vagas são limitadas. Garanta a sua enquanto o lote atual estiver aberto.</p>
+          <div className="mt-8"><Button asChild size="lg" variant="secondary" className="h-14 w-full rounded-full bg-primary px-7 text-primary-foreground hover:bg-primary/90 sm:w-auto"><a {...checkoutLinkProps}>Quero garantir minha vaga <ArrowRight /></a></Button></div>
         </div>
       </section>
 
       <footer className="border-t border-border px-5 py-8 text-center text-xs text-muted-foreground">
-        <p>Inteligência Artificial para Empresários · Informações comerciais e legais a definir.</p>
+        <p>© 2026 Ana Juliatto · Inteligência Artificial para Empresários · Todos os direitos reservados.</p>
       </footer>
     </main>
   );
