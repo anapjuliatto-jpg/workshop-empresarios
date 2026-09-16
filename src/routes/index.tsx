@@ -97,7 +97,7 @@ const testimonials = [
   {
     name: "Andressa",
     role: "Caravela Pescados · comércio",
-    detail: "Criou os materiais de divulgação do próprio negócio aplicando Inteligência Artificial.",
+    detail: "Criou em minutos um post de divulgação para a rede social do próprio negócio.",
   },
 ];
 
