@@ -94,6 +94,11 @@ const testimonials = [
     role: "Psicóloga",
     detail: "Criou a identidade e o material do próprio consultório com Inteligência Artificial.",
   },
+  {
+    name: "Andressa",
+    role: "Caravela Pescados · comércio",
+    detail: "Criou os materiais de divulgação do próprio negócio aplicando Inteligência Artificial.",
+  },
 ];
 
 const includedBenefits = [
@@ -358,14 +363,18 @@ function Index() {
             <p className="eyebrow">Resultados de quem já viveu</p>
             <h2 className="section-title [hyphens:none] [word-break:normal]">Pessoas comuns, de áreas diferentes, aplicando de verdade.</h2>
           </div>
-          <div className="mx-auto mt-10 grid max-w-4xl gap-5 min-[641px]:mt-12 md:grid-cols-2">
+          <div className="mx-auto mt-10 grid max-w-5xl gap-5 min-[641px]:mt-12 md:grid-cols-3">
             {testimonials.map(({ quote, name, role, detail }) => (
               <figure key={name} className="flex flex-col border border-border bg-card p-6 min-[641px]:p-8">
-                <blockquote className="font-display text-xl leading-snug text-heading [hyphens:none] [word-break:normal] min-[641px]:text-2xl">“{quote}”</blockquote>
+                {quote ? (
+                  <blockquote className="font-display text-xl leading-snug text-heading [hyphens:none] [word-break:normal] min-[641px]:text-[22px]">“{quote}”</blockquote>
+                ) : (
+                  <p className="font-display text-xl leading-snug text-heading [hyphens:none] [word-break:normal] min-[641px]:text-[22px]">{detail}</p>
+                )}
                 <figcaption className="mt-5 border-t border-border pt-4">
                   <p className="font-semibold text-foreground">{name}</p>
                   <p className="text-sm font-semibold text-primary">{role}</p>
-                  <p className="mt-1 text-sm leading-6 text-muted-foreground">{detail}</p>
+                  {quote ? <p className="mt-1 text-sm leading-6 text-muted-foreground">{detail}</p> : null}
                 </figcaption>
               </figure>
             ))}
