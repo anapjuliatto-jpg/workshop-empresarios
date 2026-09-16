@@ -27,16 +27,16 @@ import {
 export const Route = createFileRoute("/")({
   head: () => ({
     meta: [
-      { title: "Inteligência Artificial para Empresários | Ao vivo" },
+      { title: "A Virada da IA | Workshop ao vivo de IA aplicada" },
       {
         name: "description",
         content:
-          "Workshop online e ao vivo para aplicar Inteligência Artificial ao trabalho e aos negócios com clareza e praticidade.",
+          "A Virada da IA: workshop online e ao vivo para aplicar a Inteligência Artificial no seu trabalho e no seu negócio — na prática, mesmo sem ser da área de tecnologia.",
       },
-      { property: "og:title", content: "Inteligência Artificial para Empresários | Ao vivo" },
+      { property: "og:title", content: "A Virada da IA | Workshop ao vivo de IA aplicada" },
       {
         property: "og:description",
-        content: "Aprenda a transformar IA em uma aliada prática para sua rotina e seu negócio.",
+        content: "Aprenda a aplicar a Inteligência Artificial no seu negócio e ganhe tempo — na prática, em uma única noite.",
       },
       { property: "og:type", content: "website" },
       { name: "twitter:card", content: "summary_large_image" },
@@ -71,6 +71,7 @@ const schedule = [
 
 const faqs = [
   ["Preciso saber usar Inteligência Artificial?", "Não. O conteúdo foi pensado para partir do essencial e avançar para aplicações práticas, com linguagem acessível."],
+  ["Sou de uma geração que não cresceu com tecnologia. Consigo acompanhar?", "Com certeza. O workshop foi pensado para quem não é da área de tecnologia: cada passo é explicado em linguagem simples, no seu ritmo, e você aplica com orientação ao vivo. Sua experiência de negócio é justamente a sua maior vantagem aqui."],
   ["O workshop será ao vivo?", "Sim. É um encontro online e ao vivo, com três horas de aplicação prática — você acompanha, pergunta e coloca a mão na massa junto."],
   ["Qual é a data e o horário?", "No dia 8 de outubro de 2026, das 19h às 22h (horário de Brasília), online e ao vivo."],
   ["Haverá gravação?", "Sim. A gravação fica disponível por 7 dias após o encontro, para você rever as demonstrações com calma."],
@@ -155,7 +156,7 @@ function Index() {
     <main className="overflow-hidden pb-24 min-[641px]:pb-0">
       <nav aria-label="Navegação principal" className="sticky top-0 z-50 border-b border-border bg-background text-heading">
         <div className="mx-auto grid max-w-7xl grid-cols-[minmax(0,1fr)_auto] items-center gap-2 px-5 py-3 min-[641px]:gap-4 min-[641px]:py-4 lg:px-10">
-          <a href="#inicio" className="min-w-0 whitespace-nowrap font-display text-base font-semibold leading-none min-[641px]:text-xl">IA para Empresários</a>
+          <a href="#inicio" className="min-w-0 whitespace-nowrap font-display text-base font-semibold leading-none min-[641px]:text-xl">A Virada da IA</a>
           <Button asChild size="sm" className="h-8 shrink-0 rounded-full px-3 text-xs min-[641px]:h-9 min-[641px]:px-4 min-[641px]:text-sm">
             <a {...checkoutLinkProps}>Inscrever-me</a>
           </Button>
@@ -165,11 +166,12 @@ function Index() {
       <section id="inicio" className="relative bg-background text-foreground">
         <div className="mx-auto grid max-w-7xl lg:grid-cols-[0.95fr_1.05fr] lg:items-stretch">
           <div className="flex flex-col justify-center px-5 py-10 min-[641px]:px-10 min-[641px]:py-16 lg:px-14 lg:py-20">
+            <p className="eyebrow mb-4">A Virada da IA · Workshop online e ao vivo</p>
             <h1 className="max-w-2xl text-balance font-display text-[38px] leading-[1.06] font-medium min-[641px]:text-5xl lg:text-[58px] lg:leading-[1.03]">
               Construa uma aplicação real de IA para o seu negócio em uma única noite.
             </h1>
             <p className="mt-5 max-w-xl text-base leading-[1.65] text-muted-foreground min-[641px]:text-lg min-[641px]:leading-8">
-              Traga uma tarefa real do seu dia a dia — propostas, e-mails, relatórios, atendimento ou planejamento — e saia com ela sendo feita com Inteligência Artificial. Em três horas, com orientação e sem precisar programar.
+              Traga uma tarefa real do seu dia a dia — propostas, e-mails, relatórios, atendimento ou planejamento — e saia com ela sendo feita com Inteligência Artificial. Em três horas, com orientação e sem precisar programar — mesmo que você não seja da área de tecnologia.
             </p>
             <div className="mt-4 grid grid-cols-1 gap-3 min-[360px]:grid-cols-2 min-[360px]:gap-2 min-[641px]:mt-6 min-[641px]:gap-3">
               <div className="flex min-w-0 items-start gap-2 border-l-2 border-guarantee-detail pl-3 min-[641px]:gap-3 min-[641px]:pl-4">
@@ -290,7 +292,7 @@ function Index() {
           <div className="lg:sticky lg:top-28">
             <p className="eyebrow">Para quem é</p>
             <h2 className="section-title">Para quem lidera, decide e precisa fazer o tempo render.</h2>
-            <p className="mt-5 max-w-xl leading-7 text-muted-foreground">Uma experiência para profissionais que querem transformar a Inteligência Artificial em apoio real para o trabalho, mesmo sem formação técnica.</p>
+            <p className="mt-5 max-w-xl leading-7 text-muted-foreground">Uma experiência para profissionais experientes que querem transformar a Inteligência Artificial em apoio real para o trabalho — mesmo sem ser da área de tecnologia e sem sentir que ficaram para trás.</p>
           </div>
            <ul className="grid gap-px overflow-hidden border border-border bg-border sm:grid-cols-2">
             {["Empresários e empreendedores responsáveis pelas decisões, pela operação e pelo crescimento do negócio.", "Profissionais autônomos e prestadores de serviço que precisam aumentar sua capacidade de entrega sem perder qualidade.", "Gestores e líderes que desejam aplicar Inteligência Artificial na rotina e orientar suas equipes com mais critério.", "Quem já experimentou Inteligência Artificial de forma básica e quer avançar para aplicações ligadas à própria atividade."].map((item) => (
@@ -540,7 +542,7 @@ function Index() {
       </section>
 
       <footer className="border-t border-border px-5 py-8 text-center text-xs text-muted-foreground">
-        <p>© 2026 Ana Juliatto · Inteligência Artificial para Empresários · Todos os direitos reservados.</p>
+        <p>© 2026 Ana Juliatto · A Virada da IA · Todos os direitos reservados.</p>
       </footer>
 
       <div className="fixed inset-x-0 bottom-0 z-50 border-t border-border bg-background/95 px-4 py-3 shadow-[0_-8px_24px_-20px_rgba(0,0,0,0.5)] backdrop-blur min-[641px]:hidden">
