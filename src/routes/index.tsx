@@ -63,10 +63,10 @@ const painPoints = [
 ];
 
 const schedule = [
-  ["01", "ESCOLHA UMA NECESSIDADE REAL", "Reconheça tarefas, gargalos e oportunidades em que a Inteligência Artificial pode gerar ganho real de tempo e produtividade."],
-  ["02", "ORGANIZE O CONTEXTO PARA A IA", "Organize as informações e o contexto necessários para receber respostas mais úteis, personalizadas e aplicáveis."],
-  ["03", "CONSTRUA UMA ENTREGA PRÁTICA", "Trabalhe uma situação verdadeira da sua rotina e acompanhe a construção de um resultado prático durante o encontro."],
-  ["04", "DEFINA O PRÓXIMO PASSO", "Experimente novas possibilidades de criação e saia com prioridades definidas para continuar aplicando o conhecimento."],
+  ["01", "ESCOLHA UMA TAREFA QUE ROUBA SEU TEMPO", "Identifique, no seu dia a dia, uma tarefa repetitiva — e-mail, proposta, relatório, atendimento — que a Inteligência Artificial pode assumir. Você sai com essa tarefa escolhida e mapeada."],
+  ["02", "ENSINE A IA A TRABALHAR DO SEU JEITO", "Monte uma base com o contexto do seu negócio para a IA parar de dar respostas genéricas. Você sai com o seu Documento Mestre pronto."],
+  ["03", "RESOLVA A TAREFA AO VIVO", "Execute essa tarefa real com a Inteligência Artificial, com orientação, durante o encontro. Você sai com uma entrega feita — não só com teoria."],
+  ["04", "SAIA COM UM PLANO DO QUE APLICAR", "Defina as três próximas aplicações de IA no seu negócio. Você sai com um plano claro para a semana seguinte."],
 ];
 
 const faqs = [
@@ -74,7 +74,26 @@ const faqs = [
   ["O workshop será ao vivo?", "Sim. É um encontro online e ao vivo, com três horas de aplicação prática — você acompanha, pergunta e coloca a mão na massa junto."],
   ["Qual é a data e o horário?", "No dia 8 de outubro de 2026, das 19h às 22h (horário de Brasília), online e ao vivo."],
   ["Haverá gravação?", "Sim. A gravação fica disponível por 7 dias após o encontro, para você rever as demonstrações com calma."],
+  ["E se eu não puder assistir ao vivo no dia?", "Sem problema: a gravação fica disponível por 7 dias para você assistir e aplicar no seu tempo. Mas, se puder, participe ao vivo — é quando você tira dúvidas e faz junto."],
+  ["Funciona para o meu tipo de negócio?", "Sim. Como o workshop parte de uma tarefa real do seu próprio dia a dia, ele se adapta a qualquer área — serviços, comércio, consultoria ou profissional autônomo."],
   ["Como receberei o acesso?", "Assim que a inscrição for confirmada, você recebe por e-mail o link de acesso ao encontro e ao portal do workshop. Perto da data, enviamos um lembrete."],
+];
+
+// Depoimentos reais da 1ª edição (GPT na Prática).
+// ⚠️ Confirmar autorização de cada pessoa antes de publicar com nome.
+const testimonials = [
+  {
+    quote: "Coloquei os dados e ele gerou o relatório. Nossa, exageradamente mais fácil — economizei dias de trabalho.",
+    name: "Lucilene",
+    role: "Participante da 1ª edição",
+    detail: "Passou a gerar relatórios que antes levavam dias.",
+  },
+  {
+    quote: "Amei aprender algumas das técnicas com o GPT — e tivemos muitos resultados.",
+    name: "Larissa Thomé Nicolau",
+    role: "Psicóloga",
+    detail: "Criou a identidade e o material do próprio consultório com Inteligência Artificial.",
+  },
 ];
 
 const includedBenefits = [
@@ -143,7 +162,7 @@ function Index() {
               Construa uma aplicação real de IA para o seu negócio em uma única noite.
             </h1>
             <p className="mt-5 max-w-xl text-base leading-[1.65] text-muted-foreground min-[641px]:text-lg min-[641px]:leading-8">
-              Traga uma necessidade do seu trabalho e transforme-a em uma entrega prática com Inteligência Artificial. Em três horas, você organiza o contexto, executa uma tarefa e visualiza o próximo passo — com orientação e sem precisar programar.
+              Traga uma tarefa real do seu dia a dia — propostas, e-mails, relatórios, atendimento ou planejamento — e saia com ela sendo feita com Inteligência Artificial. Em três horas, com orientação e sem precisar programar.
             </p>
             <div className="mt-4 grid grid-cols-1 gap-3 min-[360px]:grid-cols-2 min-[360px]:gap-2 min-[641px]:mt-6 min-[641px]:gap-3">
               <div className="flex min-w-0 items-start gap-2 border-l-2 border-guarantee-detail pl-3 min-[641px]:gap-3 min-[641px]:pl-4">
@@ -272,6 +291,21 @@ function Index() {
             ))}
           </ul>
         </div>
+        <div className="section-shell mt-12 border-t border-border pt-10">
+          <p className="text-xs font-semibold uppercase tracking-[0.16em] text-muted-foreground">E para quem NÃO é</p>
+          <ul className="mt-5 grid gap-3 sm:grid-cols-3">
+            {[
+              "Quem quer virar programador ou especialista técnico em Inteligência Artificial.",
+              "Quem busca resultado mágico sem colocar a mão na massa — aqui você aplica ao vivo.",
+              "Quem ainda não tem uma atividade ou negócio para aplicar o que vai aprender.",
+            ].map((item) => (
+              <li key={item} className="flex gap-3 border-l-2 border-guarantee-detail bg-secondary px-4 py-4 text-sm leading-6 text-muted-foreground [hyphens:none] [word-break:normal]">
+                <span aria-hidden="true" className="font-display text-lg leading-none text-primary">–</span>
+                {item}
+              </li>
+            ))}
+          </ul>
+        </div>
       </section>
 
       <section className="bg-background py-16 min-[641px]:py-24">
@@ -315,6 +349,30 @@ function Index() {
               ))}
             </ul>
           </div>
+        </div>
+      </section>
+
+      <section className="section-space bg-background">
+        <div className="section-shell">
+          <div className="mx-auto max-w-3xl text-center">
+            <p className="eyebrow">Resultados de quem já viveu</p>
+            <h2 className="section-title [hyphens:none] [word-break:normal]">Pessoas comuns, de áreas diferentes, aplicando de verdade.</h2>
+          </div>
+          <div className="mx-auto mt-10 grid max-w-4xl gap-5 min-[641px]:mt-12 md:grid-cols-2">
+            {testimonials.map(({ quote, name, role, detail }) => (
+              <figure key={name} className="flex flex-col border border-border bg-card p-6 min-[641px]:p-8">
+                <blockquote className="font-display text-xl leading-snug text-heading [hyphens:none] [word-break:normal] min-[641px]:text-2xl">“{quote}”</blockquote>
+                <figcaption className="mt-5 border-t border-border pt-4">
+                  <p className="font-semibold text-foreground">{name}</p>
+                  <p className="text-sm font-semibold text-primary">{role}</p>
+                  <p className="mt-1 text-sm leading-6 text-muted-foreground">{detail}</p>
+                </figcaption>
+              </figure>
+            ))}
+          </div>
+          <p className="mx-auto mt-8 max-w-2xl text-center text-sm leading-6 text-muted-foreground [hyphens:none] [word-break:normal]">
+            Na 1ª edição, participantes de áreas como psicologia, comércio e serviços já aplicaram a Inteligência Artificial no próprio negócio.
+          </p>
         </div>
       </section>
 
