@@ -90,7 +90,7 @@ const testimonials = [
   },
   {
     quote: "Amei aprender algumas das técnicas com o GPT — e tivemos muitos resultados.",
-    name: "Larissa Thomé Nicolau",
+    name: "Larissa",
     role: "Psicóloga",
     detail: "Criou a identidade e o material do próprio consultório com Inteligência Artificial.",
   },
