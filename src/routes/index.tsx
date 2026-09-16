@@ -83,12 +83,6 @@ const faqs = [
 // ⚠️ Confirmar autorização de cada pessoa antes de publicar com nome.
 const testimonials = [
   {
-    quote: "Coloquei os dados e ele gerou o relatório. Nossa, exageradamente mais fácil — economizei dias de trabalho.",
-    name: "Lucilene",
-    role: "Participante da 1ª edição",
-    detail: "Passou a gerar relatórios que antes levavam dias.",
-  },
-  {
     quote: "Amei aprender algumas das técnicas com o GPT — e tivemos muitos resultados.",
     name: "Larissa",
     role: "Psicóloga",
@@ -99,6 +93,14 @@ const testimonials = [
     role: "Caravela Pescados · comércio",
     detail: "Criou em minutos um post de divulgação para a rede social do próprio negócio.",
   },
+];
+
+// Conversa real (WhatsApp) com a Lucilene, participante da 1ª edição. Palavras mantidas fiéis.
+const lucileneChat: { from: "ana" | "aluna"; text: string }[] = [
+  { from: "ana", text: "Isso, você passa os dados e ele gera o relatório." },
+  { from: "aluna", text: "Coloquei os dados... nossa, exageradamente mais fácil." },
+  { from: "ana", text: "Quanto tempo a menos do que levava antes de usar a IA?" },
+  { from: "aluna", text: "Dias a menos, kkkk 🙌" },
 ];
 
 const includedBenefits = [
@@ -150,7 +152,7 @@ function Index() {
   const expertImage = expertImageAsset.url;
 
   return (
-    <main className="overflow-hidden">
+    <main className="overflow-hidden pb-24 min-[641px]:pb-0">
       <nav aria-label="Navegação principal" className="sticky top-0 z-50 border-b border-border bg-background text-heading">
         <div className="mx-auto grid max-w-7xl grid-cols-[minmax(0,1fr)_auto] items-center gap-2 px-5 py-3 min-[641px]:gap-4 min-[641px]:py-4 lg:px-10">
           <a href="#inicio" className="min-w-0 whitespace-nowrap font-display text-base font-semibold leading-none min-[641px]:text-xl">IA para Empresários</a>
@@ -363,7 +365,23 @@ function Index() {
             <p className="eyebrow">Resultados de quem já viveu</p>
             <h2 className="section-title [hyphens:none] [word-break:normal]">Pessoas comuns, de áreas diferentes, aplicando de verdade.</h2>
           </div>
-          <div className="mx-auto mt-10 grid max-w-5xl gap-5 min-[641px]:mt-12 md:grid-cols-3">
+          <div className="mx-auto mt-10 max-w-md rounded-2xl border border-border bg-secondary p-4 min-[641px]:mt-12">
+            <p className="mb-3 flex items-center gap-2 text-xs font-semibold uppercase tracking-[0.14em] text-muted-foreground">
+              <span aria-hidden="true" className="inline-block size-2 rounded-full bg-primary" />
+              Conversa real com a Lucilene
+            </p>
+            <div className="space-y-2">
+              {lucileneChat.map((m, i) => (
+                <div key={i} className={m.from === "ana" ? "flex justify-end" : "flex justify-start"}>
+                  <p className={`max-w-[82%] rounded-2xl px-4 py-2 text-sm leading-6 ${m.from === "ana" ? "rounded-br-sm bg-primary text-primary-foreground" : "rounded-bl-sm bg-card text-foreground"}`}>
+                    {m.text}
+                  </p>
+                </div>
+              ))}
+            </div>
+            <p className="mt-3 text-right text-xs text-muted-foreground">Lucilene · setor administrativo</p>
+          </div>
+          <div className="mx-auto mt-6 grid max-w-3xl gap-5 md:grid-cols-2">
             {testimonials.map(({ quote, name, role, detail }) => (
               <figure key={name} className="flex flex-col border border-border bg-card p-6 min-[641px]:p-8">
                 {quote ? (
@@ -524,6 +542,12 @@ function Index() {
       <footer className="border-t border-border px-5 py-8 text-center text-xs text-muted-foreground">
         <p>© 2026 Ana Juliatto · Inteligência Artificial para Empresários · Todos os direitos reservados.</p>
       </footer>
+
+      <div className="fixed inset-x-0 bottom-0 z-50 border-t border-border bg-background/95 px-4 py-3 shadow-[0_-8px_24px_-20px_rgba(0,0,0,0.5)] backdrop-blur min-[641px]:hidden">
+        <Button asChild size="lg" className="h-12 w-full rounded-full text-sm font-semibold">
+          <a {...checkoutLinkProps}>QUERO GARANTIR MINHA VAGA</a>
+        </Button>
+      </div>
     </main>
   );
 }
