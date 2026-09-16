@@ -49,7 +49,7 @@ export const Route = createFileRoute("/")({
 // Cole aqui o link da Hotmart/Eduzz. Enquanto estiver "#inscricao",
 // os botões apenas rolam até a seção de inscrição na própria página.
 // Ex.: const CHECKOUT_URL = "https://pay.hotmart.com/XXXXXXX";
-const CHECKOUT_URL = "#inscricao";
+const CHECKOUT_URL = "https://pay.hotmart.com/R107634757P";
 const isExternalCheckout = !CHECKOUT_URL.startsWith("#");
 const checkoutLinkProps = isExternalCheckout
   ? { href: CHECKOUT_URL, target: "_blank", rel: "noopener noreferrer" }
