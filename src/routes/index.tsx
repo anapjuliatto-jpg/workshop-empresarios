@@ -73,7 +73,7 @@ const faqs = [
   ["Preciso saber usar Inteligência Artificial?", "Não. O conteúdo foi pensado para partir do essencial e avançar para aplicações práticas, com linguagem acessível."],
   ["Sou de uma geração que não cresceu com tecnologia. Consigo acompanhar?", "Com certeza. O workshop foi pensado para quem não é da área de tecnologia: cada passo é explicado em linguagem simples, no seu ritmo, e você aplica com orientação ao vivo. Sua experiência de negócio é justamente a sua maior vantagem aqui."],
   ["O workshop será ao vivo?", "Sim. É um encontro online e ao vivo, com três horas de aplicação prática — você acompanha, pergunta e coloca a mão na massa junto."],
-  ["Qual é a data e o horário?", "No dia 8 de outubro de 2026, das 19h às 22h (horário de Brasília), online e ao vivo."],
+  ["Qual é a data e o horário?", "No dia 14 de outubro de 2026, das 19h às 22h (horário de Brasília), online e ao vivo."],
   ["Haverá gravação?", "Sim. A gravação fica disponível por 7 dias após o encontro, para você rever as demonstrações com calma."],
   ["E se eu não puder assistir ao vivo no dia?", "Sem problema: a gravação fica disponível por 7 dias para você assistir e aplicar no seu tempo. Mas, se puder, participe ao vivo — é quando você tira dúvidas e faz junto."],
   ["Funciona para o meu tipo de negócio?", "Sim. Como o workshop parte de uma tarefa real do seu próprio dia a dia, ele se adapta a qualquer área — serviços, comércio, consultoria ou profissional autônomo."],
@@ -176,7 +176,7 @@ function Index() {
             <div className="mt-4 grid grid-cols-1 gap-3 min-[360px]:grid-cols-2 min-[360px]:gap-2 min-[641px]:mt-6 min-[641px]:gap-3">
               <div className="flex min-w-0 items-start gap-2 border-l-2 border-guarantee-detail pl-3 min-[641px]:gap-3 min-[641px]:pl-4">
                 <CalendarDays className="mt-0.5 size-4 shrink-0 text-primary min-[641px]:size-5" />
-                   <div className="min-w-0"><p className="text-[11px] font-semibold uppercase text-muted-foreground min-[641px]:text-xs">DATA</p><p className="mt-0.5 text-sm font-semibold min-[641px]:mt-1"><span className="min-[641px]:hidden">8 de outubro<br />de 2026</span><span className="hidden min-[641px]:inline">8 de outubro de 2026</span></p></div>
+                   <div className="min-w-0"><p className="text-[11px] font-semibold uppercase text-muted-foreground min-[641px]:text-xs">DATA</p><p className="mt-0.5 text-sm font-semibold min-[641px]:mt-1"><span className="min-[641px]:hidden">14 de outubro<br />de 2026</span><span className="hidden min-[641px]:inline">14 de outubro de 2026</span></p></div>
               </div>
                <div className="flex min-w-0 items-start gap-2 border-l-2 border-guarantee-detail pl-3 min-[641px]:gap-3 min-[641px]:pl-4">
                 <Clock3 className="mt-0.5 size-4 shrink-0 text-primary min-[641px]:size-5" />
@@ -459,7 +459,7 @@ function Index() {
               <dl className="mt-4 overflow-hidden rounded-lg border border-border bg-card px-5 shadow-sm min-[641px]:mt-6 min-[641px]:grid min-[641px]:grid-cols-2 min-[641px]:gap-5 min-[641px]:overflow-visible min-[641px]:rounded-none min-[641px]:border-0 min-[641px]:bg-transparent min-[641px]:px-0 min-[641px]:shadow-none">
                 <div className="flex min-w-0 gap-3 py-5 min-[641px]:py-0">
                   <CalendarDays className="mt-0.5 size-5 shrink-0 text-coral" aria-hidden="true" />
-                  <div className="min-w-0"><dt className="text-xs font-semibold uppercase tracking-[0.12em] text-muted-foreground min-[641px]:text-offer-muted">Data</dt><dd className="mt-1 text-base font-medium">8 de outubro de 2026</dd></div>
+                  <div className="min-w-0"><dt className="text-xs font-semibold uppercase tracking-[0.12em] text-muted-foreground min-[641px]:text-offer-muted">Data</dt><dd className="mt-1 text-base font-medium">14 de outubro de 2026</dd></div>
                 </div>
                 <div className="flex min-w-0 gap-3 border-t border-border py-5 min-[641px]:border-0 min-[641px]:py-0">
                   <Clock3 className="mt-0.5 size-5 shrink-0 text-coral" aria-hidden="true" />
