@@ -80,7 +80,7 @@ const faqs = [
   ["Como receberei o acesso?", "Assim que a inscrição for confirmada, você recebe por e-mail o link de acesso ao encontro e ao portal do workshop. Perto da data, enviamos um lembrete."],
 ];
 
-// Depoimentos reais da 1ª edição (GPT na Prática).
+// Depoimentos reais de alunas da Ana (resultados aplicando IA no próprio negócio).
 // ⚠️ Confirmar autorização de cada pessoa antes de publicar com nome.
 const testimonials = [
   {
@@ -364,7 +364,7 @@ function Index() {
       <section className="section-space bg-background">
         <div className="section-shell">
           <div className="mx-auto max-w-3xl text-center">
-            <p className="eyebrow">Resultados de quem já viveu</p>
+            <p className="eyebrow">Resultados de quem já aplicou</p>
             <h2 className="section-title [hyphens:none] [word-break:normal]">Pessoas comuns, de áreas diferentes, aplicando de verdade.</h2>
           </div>
           <div className="mx-auto mt-10 max-w-md rounded-2xl border border-border bg-secondary p-4 min-[641px]:mt-12">
@@ -400,7 +400,7 @@ function Index() {
             ))}
           </div>
           <p className="mx-auto mt-8 max-w-2xl text-center text-sm leading-6 text-muted-foreground [hyphens:none] [word-break:normal]">
-            Na 1ª edição, participantes de áreas como psicologia, comércio e serviços já aplicaram a Inteligência Artificial no próprio negócio.
+            Profissionais de áreas como psicologia, comércio e serviços que já colocaram a Inteligência Artificial para trabalhar no próprio negócio.
           </p>
         </div>
       </section>
@@ -536,7 +536,7 @@ function Index() {
          <div className="mx-auto max-w-5xl border-y border-primary bg-offer px-6 py-12 text-center text-offer-foreground sm:px-12 sm:py-16">
           <Sparkles className="mx-auto size-7" />
           <h2 className="mx-auto mt-5 max-w-3xl font-display text-4xl leading-tight font-medium sm:text-5xl">Comece a usar a IA com intenção, método e autonomia.</h2>
-          <p className="mx-auto mt-5 max-w-xl text-sm leading-6 text-primary-foreground/80">As vagas são limitadas. Garanta a sua enquanto o lote atual estiver aberto.</p>
+          <p className="mx-auto mt-5 max-w-xl text-sm leading-6 text-primary-foreground/80">As inscrições encerram no dia 14 de outubro, quando o workshop começa. Garanta a sua enquanto ainda dá tempo.</p>
           <div className="mt-8"><Button asChild size="lg" variant="secondary" className="h-14 w-full rounded-full bg-primary px-7 text-primary-foreground hover:bg-primary/90 sm:w-auto"><a {...checkoutLinkProps}>Quero garantir minha vaga <ArrowRight /></a></Button></div>
         </div>
       </section>
