@@ -542,7 +542,8 @@ function Index() {
       </section>
 
       <footer className="border-t border-border px-5 py-8 text-center text-xs text-muted-foreground">
-        <p>© 2026 Ana Juliatto · A Virada da IA · Todos os direitos reservados.</p>
+        <p>Dúvidas? Fale com a gente: <a href="mailto:contato@anajuliatto.com.br" className="font-medium text-primary underline underline-offset-2">contato@anajuliatto.com.br</a></p>
+        <p className="mt-2">© 2026 Ana Juliatto · A Virada da IA · Todos os direitos reservados.</p>
       </footer>
 
       <div className="fixed inset-x-0 bottom-0 z-50 border-t border-border bg-background/95 px-4 py-3 shadow-[0_-8px_24px_-20px_rgba(0,0,0,0.5)] backdrop-blur min-[641px]:hidden">
