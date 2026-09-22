@@ -9,3 +9,4 @@
 - [x] Validar que estrutura, conteúdo e responsividade permanecem intactos.
 - [x] Restaurar a paleta original creme, pêssego, terracota e marrom.
 - [x] Remover apenas o sobretítulo da primeira dobra e validar a página.
+- [x] Remover todas as marcas visíveis da Lovable, incluindo selo e favicon.

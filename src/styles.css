@@ -176,7 +176,9 @@
 
 /* Oculta o selo "Made with Lovable" (plano Pro) */
 #lovable-badge,
-a[href*="lovable-badge"] {
+a[href*="lovable-badge"],
+a[href*="lovable.dev"][aria-label*="Lovable"],
+[data-lovable-badge] {
   display: none !important;
 }
 
