@@ -478,9 +478,12 @@ function Index() {
             </div>
 
             <div className="flex flex-col rounded-lg border border-primary/35 bg-offer-card p-7 text-foreground shadow-sm min-[641px]:border-0 sm:p-9">
-              <p className="text-xs font-semibold uppercase tracking-[0.15em] text-primary">Investimento</p>
-              <p className="mt-4 font-display text-6xl leading-none font-semibold text-primary sm:text-7xl">R$ 147</p>
-              <p className="mt-3 text-sm font-medium text-foreground">Pagamento único</p>
+              <p className="text-xs font-semibold uppercase tracking-[0.15em] text-primary">Investimento · 1º lote</p>
+              <p className="mt-4 flex items-baseline gap-3">
+                <span className="font-display text-2xl font-medium text-muted-foreground line-through sm:text-3xl">R$ 147</span>
+                <span className="font-display text-6xl leading-none font-semibold text-primary sm:text-7xl">R$ 97</span>
+              </p>
+              <p className="mt-3 text-sm font-medium text-foreground">Pagamento único · <span className="font-semibold text-primary">1º lote com vagas limitadas</span></p>
               <p className="mt-6 text-sm leading-6 text-muted-foreground">Sua inscrição inclui o encontro ao vivo, os exercícios guiados, o acesso ao portal durante o workshop e a gravação por sete dias.</p>
               <div className="mt-7">
                 <Button asChild size="lg" className="h-14 w-full rounded-full px-6 text-sm font-semibold">
