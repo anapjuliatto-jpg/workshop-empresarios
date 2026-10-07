@@ -1,4 +1,5 @@
 import { createFileRoute } from "@tanstack/react-router";
+import { useEffect, useState } from "react";
 import {
   ArrowRight,
   CalendarDays,
@@ -148,6 +149,43 @@ function Cta({ label = "QUERO GARANTIR MINHA VAGA", compactMobile = false }: { l
   );
 }
 
+// Contador regressivo até o início do workshop (14/10/2026, 19h, horário de Brasília).
+// Renderiza só no cliente (estado inicial null) para evitar divergência de hidratação.
+const EVENTO_TIMESTAMP = new Date("2026-10-14T19:00:00-03:00").getTime();
+
+function Countdown() {
+  const [restante, setRestante] = useState<number | null>(null);
+
+  useEffect(() => {
+    const atualizar = () => setRestante(EVENTO_TIMESTAMP - Date.now());
+    atualizar();
+    const id = setInterval(atualizar, 60_000);
+    return () => clearInterval(id);
+  }, []);
+
+  if (restante === null || restante <= 0) return null;
+
+  const dias = Math.floor(restante / 86_400_000);
+  const horas = Math.floor((restante % 86_400_000) / 3_600_000);
+  const minutos = Math.floor((restante % 3_600_000) / 60_000);
+
+  const Bloco = ({ valor, rotulo }: { valor: number; rotulo: string }) => (
+    <div className="flex min-w-[52px] flex-col items-center rounded-lg bg-primary/10 px-3 py-1.5">
+      <span className="font-display text-xl font-semibold leading-none text-primary">{valor}</span>
+      <span className="mt-0.5 text-[10px] font-semibold uppercase tracking-wide text-muted-foreground">{rotulo}</span>
+    </div>
+  );
+
+  return (
+    <div className="flex flex-wrap items-center gap-2">
+      <Bloco valor={dias} rotulo="dias" />
+      <Bloco valor={horas} rotulo="horas" />
+      <Bloco valor={minutos} rotulo="min" />
+      <span className="text-xs font-medium text-muted-foreground">para o workshop começar</span>
+    </div>
+  );
+}
+
 function Index() {
   const heroImage = heroImageAsset.url;
   const expertImage = expertImageAsset.url;
@@ -183,9 +221,17 @@ function Index() {
                    <div className="min-w-0"><p className="text-[11px] font-semibold uppercase text-muted-foreground min-[641px]:text-xs">HORÁRIO</p><p className="mt-0.5 text-sm font-semibold min-[641px]:mt-1">Das 19h às 22h</p></div>
               </div>
             </div>
-            <div className="mt-5 min-[641px]:mt-7">
-              <Cta compactMobile />
-                <p className="mx-auto mt-3 max-w-[350px] text-center text-xs leading-5 text-muted-foreground min-[641px]:mx-0 min-[641px]:max-w-xl min-[641px]:text-left">Online e ao vivo • 3 horas de aplicação prática • Gravação disponível por 7 dias</p>
+            <div className="mt-5 flex flex-col gap-4 min-[641px]:mt-7">
+              <div className="flex flex-wrap items-center gap-x-3 gap-y-2">
+                <span className="font-display text-xl font-medium leading-none text-muted-foreground line-through">R$ 147</span>
+                <span className="font-display text-4xl font-semibold leading-none text-primary">R$ 97</span>
+                <span className="rounded-full bg-primary px-3 py-1 text-xs font-semibold uppercase tracking-wide text-primary-foreground">1º lote · vagas limitadas</span>
+              </div>
+              <Countdown />
+              <div>
+                <Cta compactMobile />
+                <p className="mx-auto mt-3 max-w-[350px] text-center text-xs leading-5 text-muted-foreground min-[641px]:mx-0 min-[641px]:max-w-xl min-[641px]:text-left">Pagamento único · online e ao vivo • 3 horas de aplicação prática • Gravação por 7 dias</p>
+              </div>
             </div>
           </div>
           <div className="flex flex-col border-t border-border min-[641px]:border-t-0 lg:border-l">
