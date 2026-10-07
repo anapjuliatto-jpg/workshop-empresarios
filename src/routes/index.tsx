@@ -246,14 +246,14 @@ function Index() {
        <section className="bg-secondary py-14 min-[641px]:py-20">
         <div className="section-shell grid gap-8 lg:grid-cols-[0.8fr_1.2fr] lg:items-center">
           <div>
-            <p className="eyebrow">A oportunidade</p>
-            <h2 className="section-title">O valor da IA aparece quando uma tarefa real sai do papel.</h2>
+            <p className="eyebrow">O que você leva</p>
+            <h2 className="section-title">Você não sai com teoria. Sai com uma tarefa do seu negócio já resolvida.</h2>
           </div>
           <div className="grid gap-px overflow-hidden border border-border bg-border sm:grid-cols-3">
             {[
-              ["Contexto", "Organize as informações do seu negócio para orientar a IA."],
-              ["Execução", "Use a IA em uma necessidade concreta da sua rotina."],
-              ["Continuidade", "Defina onde aplicar o resultado depois do encontro."],
+              ["Uma tarefa resolvida", "Escolha um e-mail, uma proposta ou um relatório que rouba seu tempo e saia da noite com ele pronto, feito com Inteligência Artificial."],
+              ["Sua base pronta", "Monte o seu Documento Mestre para a Inteligência Artificial parar de responder genérico e passar a falar a língua do seu negócio."],
+              ["Um plano claro", "Defina as 3 próximas tarefas que você vai delegar à Inteligência Artificial já na semana seguinte."],
             ].map(([title, text]) => (
               <article key={title} className="bg-card p-6">
                 <h3 className="font-display text-2xl font-semibold text-heading">{title}</h3>
